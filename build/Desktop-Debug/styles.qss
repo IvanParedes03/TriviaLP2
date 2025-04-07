@@ -1,0 +1,73 @@
+QDialog {
+    background-color: #f5f5f5;
+}
+
+QLabel {
+    color: #2e3b4e;
+}
+
+QLineEdit {
+    background-color: #ffffff;
+    border: 2px solid #4CAF50;
+}
+
+QLineEdit:focus {
+    border-color: #FF9800;
+}
+
+QPushButton {
+    background-color: #008CBA;
+    color: white;
+    border: 2px solid #008CBA;
+}
+
+QPushButton:pressed {
+    background-color: #005f73;
+    border-color: #005f73;
+}
+
+QPushButton:enabled {
+    background-color: #4CAF50;
+    color: white;
+}
+
+QLineEdit, QPushButton {
+    border-radius: 5px;
+}
+
+QPushButton:pressed, QLineEdit:focus {
+    border-radius: 5px;
+}
+
+QLabel {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+}
+
+QLineEdit, QPushButton {
+    font-family: 'Segoe UI', sans-serif;
+    font-style: italic;
+}
+
+QGroupBox {
+    border: 2px solid #008CBA;
+    background-color: #e0f7fa;
+}
+
+QGroupBox::title {
+    color: #008CBA;
+    font-family: 'Verdana', sans-serif;
+    font-weight: bold;
+}
+
+QDialog, QGroupBox {
+    border: 2px solid #008CBA;
+    border-radius: 10px;
+}
+
+QLabel {
+    color: #2e3b4e;
+    font-family: 'Georgia', serif;
+    font-style: normal;
+}
+
