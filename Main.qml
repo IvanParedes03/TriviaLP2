@@ -14,8 +14,6 @@ Window {
     HandlersCpp{
         id: handlersCpp
     }
-
-    //TRATA DE QUE LA VENTANA APAREZCA SIEMPRE AL MEDIO
     //x: (Screen.widht - widht) / 2  NO FUNCIONA MEN QLOCURA
     //y: (Screen.height - height) / 2 TAMPOCO FUNCIONA
 

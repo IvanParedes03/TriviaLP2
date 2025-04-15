@@ -10,16 +10,12 @@ class handlersCpp: public QObject{
 
 public slots:
 
-   // handlersCpp(QObject *objetoPadre = nullptr): QObject(objetoPadre) {}
-
     void textoValido (QString texto){
         qDebug() << texto;
     }
     void buscarImagen(const QString &texto){
         qDebug() << "El boton" << texto << "ha sido presionado\n";
     }
-
 };
-
 
 #endif // HANDLERS_H
