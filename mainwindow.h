@@ -17,6 +17,14 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void on_button_buscarImagen_clicked();
+
+    void on_button_crearPregunta_clicked();
+
+    void on_button_listarPreguntas_clicked();
+
+
 private:
     Ui::MainWindow *ui;
 };

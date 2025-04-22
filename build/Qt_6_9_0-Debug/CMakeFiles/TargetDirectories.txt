@@ -1,0 +1,9 @@
+/mnt/ntfs/tareas_facu/LP2/QTTriviaLP2/build/Qt_6_9_0-Debug/CMakeFiles/QTTriviaLP2.dir
+/mnt/ntfs/tareas_facu/LP2/QTTriviaLP2/build/Qt_6_9_0-Debug/CMakeFiles/edit_cache.dir
+/mnt/ntfs/tareas_facu/LP2/QTTriviaLP2/build/Qt_6_9_0-Debug/CMakeFiles/rebuild_cache.dir
+/mnt/ntfs/tareas_facu/LP2/QTTriviaLP2/build/Qt_6_9_0-Debug/CMakeFiles/list_install_components.dir
+/mnt/ntfs/tareas_facu/LP2/QTTriviaLP2/build/Qt_6_9_0-Debug/CMakeFiles/install.dir
+/mnt/ntfs/tareas_facu/LP2/QTTriviaLP2/build/Qt_6_9_0-Debug/CMakeFiles/install/local.dir
+/mnt/ntfs/tareas_facu/LP2/QTTriviaLP2/build/Qt_6_9_0-Debug/CMakeFiles/install/strip.dir
+/mnt/ntfs/tareas_facu/LP2/QTTriviaLP2/build/Qt_6_9_0-Debug/CMakeFiles/QTTriviaLP2_autogen_timestamp_deps.dir
+/mnt/ntfs/tareas_facu/LP2/QTTriviaLP2/build/Qt_6_9_0-Debug/CMakeFiles/QTTriviaLP2_autogen.dir

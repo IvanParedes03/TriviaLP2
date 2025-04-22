@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/mnt/ntfs/tareas_facu/LP2/QTTriviaLP2/build/Qt_6_9_0-Debug/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

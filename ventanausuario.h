@@ -3,7 +3,6 @@
 
 #include <QDialog>
 #include <vector>
-#include <string>
 #include "classusuario.h"
 
 namespace Ui {
