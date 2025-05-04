@@ -1,7 +1,7 @@
 #include "menumain.h"
 #include "ui_menumain.h"
 #include "ventanausuario.h"
-#include "mainwindow.h"
+#include "ventanacrearpreguntas.h"
 #include <QPushButton>
 menuMain::menuMain(QWidget *parent)
     : QMainWindow(parent)
@@ -17,8 +17,8 @@ menuMain::~menuMain()
     delete ui;
 }
 
-
 void menuMain::gestionUsuarios(){
+
     VentanaUsuario *ventanaUsuario = new VentanaUsuario();
 
     connect(ventanaUsuario, &VentanaUsuario::destroyed, this, [this](){
@@ -30,12 +30,12 @@ void menuMain::gestionUsuarios(){
 }
 
 void menuMain::gestionPreguntas(){
-    MainWindow *ventanaPreguntas = new MainWindow();
+    ventanaCrearPreguntas_ = new VentanaCrearPreguntas();
 
-    connect(ventanaPreguntas, &MainWindow::destroyed, this, [this](){
+    connect(ventanaCrearPreguntas_, &VentanaCrearPreguntas::destroyed, this, [this](){
         this->show();
     });
 
-    ventanaPreguntas->show();
+    ventanaCrearPreguntas_->show();
     this->hide();
 }

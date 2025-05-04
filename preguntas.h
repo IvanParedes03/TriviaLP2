@@ -1,17 +1,22 @@
 #ifndef PREGUNTAS_H
 #define PREGUNTAS_H
 
+#include "lectorjson.h"
+#include <QMainWindow>
 #include <QString>
 #include <QUuid>
+#include <QListWidget>
 
-class preguntas
+class preguntas: public LectorJson
 {
 public:
+
+    preguntas();
     preguntas(QString &, QString &, QString &, QString &, QString &, QString &, const QString &, QString &);
     ~preguntas();
 
-    static void guardarJSON(std::vector<preguntas>& pregunta);
-    static void cargarJSON(std::vector<preguntas>& pregunta);
+    void guardarJSON(std::vector<preguntas>& pregunta);
+    void cargarJSON(std::vector<preguntas>& pregunta);
 
     QString getId() const {return id;}
     QString getPregunta() const {return pregunta;}
@@ -40,7 +45,6 @@ private:
     QString opcionCorrecta;
     QString categoria;
     QString imagenPath;
-
 };
 
 #endif // PREGUNTAS_H

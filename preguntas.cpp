@@ -5,7 +5,17 @@
 #include <QJsonDocument>
 #include <QFile>
 
-//Contructor y destructor
+preguntas::preguntas()
+{
+    id = QString();
+    pregunta = QString();
+    opcionA = QString();
+    opcionB = QString();
+    opcionC = QString();
+    opcionCorrecta = QString();
+    categoria = QString();
+    imagenPath = QString();
+}
 
 preguntas::preguntas (QString &p, QString &opA, QString &opB, QString &opC, QString &corr, QString &cat, const QString &Id, QString &imgP){
     id = Id;
@@ -21,8 +31,6 @@ preguntas::preguntas (QString &p, QString &opA, QString &opB, QString &opC, QStr
 preguntas::~preguntas(){
     std::cout << "Se ha eliminado el objeto preguntas..." << std::endl;
 }
-
-//Funciones para Json
 
 void preguntas::guardarJSON(std::vector<preguntas>& pregunta){
     QJsonArray jsonArray;
@@ -53,28 +61,8 @@ void preguntas::guardarJSON(std::vector<preguntas>& pregunta){
 }
 
 void preguntas::cargarJSON(std::vector<preguntas>& pregunta){
-    QFile archivo("preguntas.json");
 
-    if (!archivo.open(QIODevice::ReadOnly)) {
-        std::cerr << "No se pudo abrir el archivo preguntas.json para lectura." << std::endl;
-        return;
-    }
-
-    QByteArray data = archivo.readAll();
-    archivo.close();
-
-    QJsonDocument doc = QJsonDocument::fromJson(data);
-    if (doc.isNull()) {
-        std::cerr << "Error al parsear el archivo JSON." << std::endl;
-        return;
-    }
-
-    if (!doc.isArray()) {
-        std::cerr << "El archivo JSON no contiene un array de preguntas." << std::endl;
-        return;
-    }
-
-    QJsonArray jsonPreguntas = doc.array();
+    QJsonArray jsonPreguntas = leerPreguntasJson();
 
     for (const auto& elem : jsonPreguntas) {
         if (!elem.isObject()) {
