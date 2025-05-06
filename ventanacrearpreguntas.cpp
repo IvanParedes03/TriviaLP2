@@ -17,7 +17,7 @@ VentanaCrearPreguntas::VentanaCrearPreguntas(QWidget *parent)
     , ui(new Ui::VentanaCrearPreguntas)
     , preguntas()
 {
-    setAttribute(Qt::WA_DeleteOnClose, true); //agregue esto para que al cerrar la ventana vuelva al menu
+    setAttribute(Qt::WA_DeleteOnClose, true);
     ui->setupUi(this);
 
 }

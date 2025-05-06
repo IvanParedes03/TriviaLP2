@@ -122,7 +122,6 @@ void VentanaListarCategorias::on_pushButton_borrarCategoriaSeleccionada_clicked(
                     nuevoArray.append(preguntaJson);
                 } else {
                     preguntasBorradas++;
-                    // Aquí podrías agregar lógica para borrar las imágenes asociadas si lo deseas
                     QString nombreArchivoImagen = preguntaJson.value("imagenBase64File").toString();
                     if (!nombreArchivoImagen.isEmpty()) {
                         QString rutaCarpetaBase64 = "imagenes_base64/";
@@ -139,9 +138,9 @@ void VentanaListarCategorias::on_pushButton_borrarCategoriaSeleccionada_clicked(
             archivo.write(updatedDoc.toJson(QJsonDocument::Indented));
             archivo.close();
             QMessageBox::information(this, tr("Éxito"), tr("Categoría '%1' y %2 preguntas asociadas borradas correctamente.").arg(categoriaABorrar).arg(preguntasBorradas));
-            cargarListaCategorias(); // Recargar la lista
-            ui->pushButton_borrarCategoriaSeleccionada->setEnabled(false); // Deshabilitar el botón después de borrar
-            categoriaSeleccionada = nullptr; // Deseleccionar la categoría
+            cargarListaCategorias();
+            ui->pushButton_borrarCategoriaSeleccionada->setEnabled(false);
+            categoriaSeleccionada = nullptr;
         } else {
             qDebug() << "Error al escribir en el archivo preguntas.json.";
             QMessageBox::critical(this, tr("Error"), tr("No se pudo guardar los cambios en el archivo de preguntas."));

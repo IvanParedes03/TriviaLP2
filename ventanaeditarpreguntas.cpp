@@ -85,7 +85,7 @@ void VentanaEditarPreguntas::on_pushButton_editarPregunta_clicked()
 {
     QJsonObject preguntaEditada;
 
-    preguntaEditada["id"] = idPreguntaEditable; // Usar el ID almacenado
+    preguntaEditada["id"] = idPreguntaEditable;
     preguntaEditada["pregunta"] = ui->lineEdit_preguntaEditar->text();
     preguntaEditada["opcionA"] = ui->lineEdit_opcionAEditar->text();
     preguntaEditada["opcionB"] = ui->lineEdit_opcionBEditar->text();
