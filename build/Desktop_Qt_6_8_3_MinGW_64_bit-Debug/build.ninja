@@ -121,17 +121,17 @@ build CMakeFiles/QTTriviaLP2.dir/ventanacrearpreguntas.cpp.obj: CXX_COMPILER__QT
   OBJECT_DIR = CMakeFiles\QTTriviaLP2.dir
   OBJECT_FILE_DIR = CMakeFiles\QTTriviaLP2.dir
 
-build CMakeFiles/QTTriviaLP2.dir/ventanaeditarpreguntas.cpp.obj: CXX_COMPILER__QTTriviaLP2_unscanned_Debug C$:/Users/HP$ Elitebook$ 735$ G6/OneDrive/Proyectos$ de$ programacion/Trivia_Lp2-rama_mati/ventanaeditarpreguntas.cpp || cmake_object_order_depends_target_QTTriviaLP2
+build CMakeFiles/QTTriviaLP2.dir/ventanalistarpreguntas.cpp.obj: CXX_COMPILER__QTTriviaLP2_unscanned_Debug C$:/Users/HP$ Elitebook$ 735$ G6/OneDrive/Proyectos$ de$ programacion/Trivia_Lp2-rama_mati/ventanalistarpreguntas.cpp || cmake_object_order_depends_target_QTTriviaLP2
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\QTTriviaLP2.dir\ventanaeditarpreguntas.cpp.obj.d
+  DEP_FILE = CMakeFiles\QTTriviaLP2.dir\ventanalistarpreguntas.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -I"C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/QTTriviaLP2_autogen/include" -isystem C:/Qt/6.8.3/mingw_64/include/QtCore -isystem C:/Qt/6.8.3/mingw_64/include -isystem C:/Qt/6.8.3/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.8.3/mingw_64/include/QtWidgets -isystem C:/Qt/6.8.3/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\QTTriviaLP2.dir
   OBJECT_FILE_DIR = CMakeFiles\QTTriviaLP2.dir
 
-build CMakeFiles/QTTriviaLP2.dir/ventanaeditarcategorias.cpp.obj: CXX_COMPILER__QTTriviaLP2_unscanned_Debug C$:/Users/HP$ Elitebook$ 735$ G6/OneDrive/Proyectos$ de$ programacion/Trivia_Lp2-rama_mati/ventanaeditarcategorias.cpp || cmake_object_order_depends_target_QTTriviaLP2
+build CMakeFiles/QTTriviaLP2.dir/ventanalistarcategorias.cpp.obj: CXX_COMPILER__QTTriviaLP2_unscanned_Debug C$:/Users/HP$ Elitebook$ 735$ G6/OneDrive/Proyectos$ de$ programacion/Trivia_Lp2-rama_mati/ventanalistarcategorias.cpp || cmake_object_order_depends_target_QTTriviaLP2
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\QTTriviaLP2.dir\ventanaeditarcategorias.cpp.obj.d
+  DEP_FILE = CMakeFiles\QTTriviaLP2.dir\ventanalistarcategorias.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -I"C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/QTTriviaLP2_autogen/include" -isystem C:/Qt/6.8.3/mingw_64/include/QtCore -isystem C:/Qt/6.8.3/mingw_64/include -isystem C:/Qt/6.8.3/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.8.3/mingw_64/include/QtWidgets -isystem C:/Qt/6.8.3/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\QTTriviaLP2.dir
@@ -145,6 +145,14 @@ build CMakeFiles/QTTriviaLP2.dir/lectorjson.cpp.obj: CXX_COMPILER__QTTriviaLP2_u
   OBJECT_DIR = CMakeFiles\QTTriviaLP2.dir
   OBJECT_FILE_DIR = CMakeFiles\QTTriviaLP2.dir
 
+build CMakeFiles/QTTriviaLP2.dir/ventanaeditarpreguntas.cpp.obj: CXX_COMPILER__QTTriviaLP2_unscanned_Debug C$:/Users/HP$ Elitebook$ 735$ G6/OneDrive/Proyectos$ de$ programacion/Trivia_Lp2-rama_mati/ventanaeditarpreguntas.cpp || cmake_object_order_depends_target_QTTriviaLP2
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\QTTriviaLP2.dir\ventanaeditarpreguntas.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -I"C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/QTTriviaLP2_autogen/include" -isystem C:/Qt/6.8.3/mingw_64/include/QtCore -isystem C:/Qt/6.8.3/mingw_64/include -isystem C:/Qt/6.8.3/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.8.3/mingw_64/include/QtWidgets -isystem C:/Qt/6.8.3/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\QTTriviaLP2.dir
+  OBJECT_FILE_DIR = CMakeFiles\QTTriviaLP2.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target QTTriviaLP2
@@ -153,7 +161,7 @@ build CMakeFiles/QTTriviaLP2.dir/lectorjson.cpp.obj: CXX_COMPILER__QTTriviaLP2_u
 #############################################
 # Link the executable QTTriviaLP2.exe
 
-build QTTriviaLP2.exe: CXX_EXECUTABLE_LINKER__QTTriviaLP2_Debug CMakeFiles/QTTriviaLP2.dir/QTTriviaLP2_autogen/mocs_compilation.cpp.obj CMakeFiles/QTTriviaLP2.dir/main.cpp.obj CMakeFiles/QTTriviaLP2.dir/ventanausuario.cpp.obj CMakeFiles/QTTriviaLP2.dir/classusuario.cpp.obj CMakeFiles/QTTriviaLP2.dir/ventanalistausuario.cpp.obj CMakeFiles/QTTriviaLP2.dir/ventanaeditarusuario.cpp.obj CMakeFiles/QTTriviaLP2.dir/menumain.cpp.obj CMakeFiles/QTTriviaLP2.dir/preguntas.cpp.obj CMakeFiles/QTTriviaLP2.dir/ventanacrearpreguntas.cpp.obj CMakeFiles/QTTriviaLP2.dir/ventanaeditarpreguntas.cpp.obj CMakeFiles/QTTriviaLP2.dir/ventanaeditarcategorias.cpp.obj CMakeFiles/QTTriviaLP2.dir/lectorjson.cpp.obj | C$:/Qt/6.8.3/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.8.3/mingw_64/lib/libQt6Gui.a C$:/Qt/6.8.3/mingw_64/lib/libQt6Core.a C$:/Qt/6.8.3/mingw_64/lib/libQt6EntryPoint.a || QTTriviaLP2_autogen QTTriviaLP2_autogen_timestamp_deps
+build QTTriviaLP2.exe: CXX_EXECUTABLE_LINKER__QTTriviaLP2_Debug CMakeFiles/QTTriviaLP2.dir/QTTriviaLP2_autogen/mocs_compilation.cpp.obj CMakeFiles/QTTriviaLP2.dir/main.cpp.obj CMakeFiles/QTTriviaLP2.dir/ventanausuario.cpp.obj CMakeFiles/QTTriviaLP2.dir/classusuario.cpp.obj CMakeFiles/QTTriviaLP2.dir/ventanalistausuario.cpp.obj CMakeFiles/QTTriviaLP2.dir/ventanaeditarusuario.cpp.obj CMakeFiles/QTTriviaLP2.dir/menumain.cpp.obj CMakeFiles/QTTriviaLP2.dir/preguntas.cpp.obj CMakeFiles/QTTriviaLP2.dir/ventanacrearpreguntas.cpp.obj CMakeFiles/QTTriviaLP2.dir/ventanalistarpreguntas.cpp.obj CMakeFiles/QTTriviaLP2.dir/ventanalistarcategorias.cpp.obj CMakeFiles/QTTriviaLP2.dir/lectorjson.cpp.obj CMakeFiles/QTTriviaLP2.dir/ventanaeditarpreguntas.cpp.obj | C$:/Qt/6.8.3/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.8.3/mingw_64/lib/libQt6Gui.a C$:/Qt/6.8.3/mingw_64/lib/libQt6Core.a C$:/Qt/6.8.3/mingw_64/lib/libQt6EntryPoint.a || QTTriviaLP2_autogen QTTriviaLP2_autogen_timestamp_deps
   FLAGS = -DQT_QML_DEBUG -g
   LINK_FLAGS = -mwindows
   LINK_LIBRARIES = C:/Qt/6.8.3/mingw_64/lib/libQt6Widgets.a  C:/Qt/6.8.3/mingw_64/lib/libQt6Gui.a  C:/Qt/6.8.3/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -lmingw32  C:/Qt/6.8.3/mingw_64/lib/libQt6EntryPoint.a  -lshell32  -ld3d11  -ldxgi  -ldxguid  -ld3d12  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
@@ -240,7 +248,7 @@ build QTTriviaLP2_autogen_timestamp_deps: phony
 #############################################
 # Utility command for QTTriviaLP2_autogen
 
-build QTTriviaLP2_autogen: phony CMakeFiles/QTTriviaLP2_autogen QTTriviaLP2_autogen/include/ui_ventanausuario.h QTTriviaLP2_autogen/include/ui_ventanalistausuario.h QTTriviaLP2_autogen/include/ui_ventanaeditarusuario.h QTTriviaLP2_autogen/include/ui_menumain.h QTTriviaLP2_autogen/include/ui_ventanacrearpreguntas.h QTTriviaLP2_autogen/include/ui_ventanaeditarpreguntas.h QTTriviaLP2_autogen/include/ui_ventanaeditarcategorias.h QTTriviaLP2_autogen/timestamp QTTriviaLP2_autogen/mocs_compilation.cpp QTTriviaLP2_autogen_timestamp_deps
+build QTTriviaLP2_autogen: phony CMakeFiles/QTTriviaLP2_autogen QTTriviaLP2_autogen/include/ui_ventanausuario.h QTTriviaLP2_autogen/include/ui_ventanalistausuario.h QTTriviaLP2_autogen/include/ui_ventanaeditarusuario.h QTTriviaLP2_autogen/include/ui_menumain.h QTTriviaLP2_autogen/include/ui_ventanacrearpreguntas.h QTTriviaLP2_autogen/include/ui_ventanalistarpreguntas.h QTTriviaLP2_autogen/include/ui_ventanalistarcategorias.h QTTriviaLP2_autogen/include/ui_ventanaeditarpreguntas.h QTTriviaLP2_autogen/timestamp QTTriviaLP2_autogen/mocs_compilation.cpp QTTriviaLP2_autogen_timestamp_deps
 
 
 #############################################
@@ -257,7 +265,7 @@ build QTTriviaLP2_autogen/timestamp QTTriviaLP2_autogen/mocs_compilation.cpp | $
 #############################################
 # Phony custom command for CMakeFiles\QTTriviaLP2_autogen
 
-build CMakeFiles/QTTriviaLP2_autogen QTTriviaLP2_autogen/include/ui_ventanausuario.h QTTriviaLP2_autogen/include/ui_ventanalistausuario.h QTTriviaLP2_autogen/include/ui_ventanaeditarusuario.h QTTriviaLP2_autogen/include/ui_menumain.h QTTriviaLP2_autogen/include/ui_ventanacrearpreguntas.h QTTriviaLP2_autogen/include/ui_ventanaeditarpreguntas.h QTTriviaLP2_autogen/include/ui_ventanaeditarcategorias.h | ${cmake_ninja_workdir}CMakeFiles/QTTriviaLP2_autogen ${cmake_ninja_workdir}QTTriviaLP2_autogen/include/ui_ventanausuario.h ${cmake_ninja_workdir}QTTriviaLP2_autogen/include/ui_ventanalistausuario.h ${cmake_ninja_workdir}QTTriviaLP2_autogen/include/ui_ventanaeditarusuario.h ${cmake_ninja_workdir}QTTriviaLP2_autogen/include/ui_menumain.h ${cmake_ninja_workdir}QTTriviaLP2_autogen/include/ui_ventanacrearpreguntas.h ${cmake_ninja_workdir}QTTriviaLP2_autogen/include/ui_ventanaeditarpreguntas.h ${cmake_ninja_workdir}QTTriviaLP2_autogen/include/ui_ventanaeditarcategorias.h: phony QTTriviaLP2_autogen/timestamp || QTTriviaLP2_autogen_timestamp_deps
+build CMakeFiles/QTTriviaLP2_autogen QTTriviaLP2_autogen/include/ui_ventanausuario.h QTTriviaLP2_autogen/include/ui_ventanalistausuario.h QTTriviaLP2_autogen/include/ui_ventanaeditarusuario.h QTTriviaLP2_autogen/include/ui_menumain.h QTTriviaLP2_autogen/include/ui_ventanacrearpreguntas.h QTTriviaLP2_autogen/include/ui_ventanalistarpreguntas.h QTTriviaLP2_autogen/include/ui_ventanalistarcategorias.h QTTriviaLP2_autogen/include/ui_ventanaeditarpreguntas.h | ${cmake_ninja_workdir}CMakeFiles/QTTriviaLP2_autogen ${cmake_ninja_workdir}QTTriviaLP2_autogen/include/ui_ventanausuario.h ${cmake_ninja_workdir}QTTriviaLP2_autogen/include/ui_ventanalistausuario.h ${cmake_ninja_workdir}QTTriviaLP2_autogen/include/ui_ventanaeditarusuario.h ${cmake_ninja_workdir}QTTriviaLP2_autogen/include/ui_menumain.h ${cmake_ninja_workdir}QTTriviaLP2_autogen/include/ui_ventanacrearpreguntas.h ${cmake_ninja_workdir}QTTriviaLP2_autogen/include/ui_ventanalistarpreguntas.h ${cmake_ninja_workdir}QTTriviaLP2_autogen/include/ui_ventanalistarcategorias.h ${cmake_ninja_workdir}QTTriviaLP2_autogen/include/ui_ventanaeditarpreguntas.h: phony QTTriviaLP2_autogen/timestamp || QTTriviaLP2_autogen_timestamp_deps
 
 # =============================================================================
 # Target aliases.

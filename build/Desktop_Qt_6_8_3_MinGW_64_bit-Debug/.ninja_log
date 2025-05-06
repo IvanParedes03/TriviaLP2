@@ -1,84 +1,66 @@
 # ninja log v6
-539	8936	7680357721576057	CMakeFiles/QTTriviaLP2.dir/menumain.cpp.obj	4f97bf4126226cf1
-1424	11838	7680353013411887	CMakeFiles/QTTriviaLP2.dir/QTTriviaLP2_autogen/mocs_compilation.cpp.obj	1650bc1c6ceb7fb0
-1486	8815	7680353014041963	CMakeFiles/QTTriviaLP2.dir/lectorjson.cpp.obj	48c493129e69927
-64	515	7680357716819740	C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/QTTriviaLP2_autogen/timestamp	d15b9d19816a07d0
-553	8884	7680357721711561	CMakeFiles/QTTriviaLP2.dir/ventanaeditarpreguntas.cpp.obj	927ccd2ebceba39d
+526	10919	7682598356033476	CMakeFiles/QTTriviaLP2.dir/ventanacrearpreguntas.cpp.obj	712be6d90bf0d5b3
+511	6867	7682598355886508	CMakeFiles/QTTriviaLP2.dir/ventanaeditarusuario.cpp.obj	9ec45526aabc3a35
+546	10156	7682598356218755	CMakeFiles/QTTriviaLP2.dir/ventanaeditarpreguntas.cpp.obj	927ccd2ebceba39d
+64	496	7682598351405557	QTTriviaLP2_autogen/mocs_compilation.cpp	d15b9d19816a07d0
+498	7106	7682598355753013	CMakeFiles/QTTriviaLP2.dir/ventanausuario.cpp.obj	441370840d0e5d6e
+90	4226	7681570200996956	build.ninja	de0fcea3dfea2262
+10920	11778	7682598459969572	QTTriviaLP2.exe	bf84241b12fcc3b0
+539	10240	7682598356165585	CMakeFiles/QTTriviaLP2.dir/ventanalistarcategorias.cpp.obj	82ad1a0944038130
+444	7730	7681139879768916	CMakeFiles/QTTriviaLP2.dir/ventanaeditarcategorias.cpp.obj	91deea8021cee23e
+532	10280	7682598356098229	CMakeFiles/QTTriviaLP2.dir/ventanalistarpreguntas.cpp.obj	5bf6cbb9ceea0d0c
+64	496	7682598351405557	QTTriviaLP2_autogen/timestamp	d15b9d19816a07d0
 2118	9948	7680301077787700	CMakeFiles/QTTriviaLP2.dir/classusuario.cpp.obj	b3fcee0183d4450a
-64	515	7680357716819740	QTTriviaLP2_autogen/timestamp	d15b9d19816a07d0
-64	515	7680357716819740	QTTriviaLP2_autogen/mocs_compilation.cpp	d15b9d19816a07d0
-525	7161	7680357721424468	CMakeFiles/QTTriviaLP2.dir/ventanalistausuario.cpp.obj	ba45684bf3deb9b7
-64	515	7680357716819740	C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/QTTriviaLP2_autogen/mocs_compilation.cpp	d15b9d19816a07d0
-513	6603	7677680732751522	CMakeFiles/QTTriviaLP2.dir/mainwindow.cpp.obj	fbc39f628ab7b989
-1457	11649	7680353013742328	CMakeFiles/QTTriviaLP2.dir/preguntas.cpp.obj	89f3f44342d61205
+466	8241	7682596468976741	CMakeFiles/QTTriviaLP2.dir/lectorjson.cpp.obj	48c493129e69927
+64	496	7682598351405557	C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/QTTriviaLP2_autogen/timestamp	d15b9d19816a07d0
+2890	22177	7681724607282475	CMakeFiles/QTTriviaLP2.dir/preguntas.cpp.obj	89f3f44342d61205
 11	57	7677424363228736	CMakeFiles/clean.additional	baedbe210acaa455
+3208	18027	7681754562104248	CMakeFiles/QTTriviaLP2.dir/main.cpp.obj	bcdb5fe569618268
 58	75	7677424363700607	clean	139b443fbd37261f
-1112	8206	7677548840246269	CMakeFiles/QTTriviaLP2.dir/main.cpp.obj	bcdb5fe569618268
-9376	10471	7680357809939202	QTTriviaLP2.exe	eb1dc86aabf14e86
-561	8882	7680357721796771	CMakeFiles/QTTriviaLP2.dir/ventanaeditarcategorias.cpp.obj	91deea8021cee23e
-546	9376	7680357721636091	CMakeFiles/QTTriviaLP2.dir/ventanacrearpreguntas.cpp.obj	712be6d90bf0d5b3
-532	7167	7680357721500896	CMakeFiles/QTTriviaLP2.dir/ventanaeditarusuario.cpp.obj	9ec45526aabc3a35
-518	7568	7680357721351268	CMakeFiles/QTTriviaLP2.dir/ventanausuario.cpp.obj	441370840d0e5d6e
-183	971	7680739772555351	QTTriviaLP2_autogen/timestamp	d15b9d19816a07d0
-183	971	7680739772555351	QTTriviaLP2_autogen/mocs_compilation.cpp	d15b9d19816a07d0
-183	971	7680739772555351	C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/QTTriviaLP2_autogen/timestamp	d15b9d19816a07d0
-183	971	7680739772555351	C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/QTTriviaLP2_autogen/mocs_compilation.cpp	d15b9d19816a07d0
-993	12545	7680739780654747	CMakeFiles/QTTriviaLP2.dir/ventanalistausuario.cpp.obj	ba45684bf3deb9b7
-1006	12549	7680739780781175	CMakeFiles/QTTriviaLP2.dir/ventanaeditarusuario.cpp.obj	9ec45526aabc3a35
-975	12908	7680739780469277	CMakeFiles/QTTriviaLP2.dir/ventanausuario.cpp.obj	441370840d0e5d6e
-1043	14939	7680739781157022	CMakeFiles/QTTriviaLP2.dir/ventanaeditarpreguntas.cpp.obj	927ccd2ebceba39d
-1056	14951	7680739781287004	CMakeFiles/QTTriviaLP2.dir/ventanaeditarcategorias.cpp.obj	91deea8021cee23e
-1018	15453	7680739780907810	CMakeFiles/QTTriviaLP2.dir/menumain.cpp.obj	4f97bf4126226cf1
-1030	15978	7680739781027890	CMakeFiles/QTTriviaLP2.dir/ventanacrearpreguntas.cpp.obj	712be6d90bf0d5b3
-15979	17385	7680739930511978	QTTriviaLP2.exe	eb1dc86aabf14e86
-109	2249	7680754669814658	QTTriviaLP2_autogen/timestamp	d15b9d19816a07d0
-109	2249	7680754669814658	QTTriviaLP2_autogen/mocs_compilation.cpp	d15b9d19816a07d0
-109	2249	7680754669814658	C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/QTTriviaLP2_autogen/timestamp	d15b9d19816a07d0
-109	2249	7680754669814658	C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/QTTriviaLP2_autogen/mocs_compilation.cpp	d15b9d19816a07d0
-2283	13115	7680754672628258	CMakeFiles/QTTriviaLP2.dir/ventanalistausuario.cpp.obj	ba45684bf3deb9b7
-2293	13206	7680754672726598	CMakeFiles/QTTriviaLP2.dir/ventanaeditarusuario.cpp.obj	9ec45526aabc3a35
-2273	13541	7680754672525912	CMakeFiles/QTTriviaLP2.dir/ventanausuario.cpp.obj	441370840d0e5d6e
-2251	15822	7680754672309747	CMakeFiles/QTTriviaLP2.dir/QTTriviaLP2_autogen/mocs_compilation.cpp.obj	1650bc1c6ceb7fb0
-2260	17021	7680754672391950	CMakeFiles/QTTriviaLP2.dir/main.cpp.obj	bcdb5fe569618268
-2305	17309	7680754672843844	CMakeFiles/QTTriviaLP2.dir/menumain.cpp.obj	4f97bf4126226cf1
-2365	17555	7680754673439149	CMakeFiles/QTTriviaLP2.dir/ventanaeditarcategorias.cpp.obj	91deea8021cee23e
-2351	17729	7680754673299119	CMakeFiles/QTTriviaLP2.dir/ventanaeditarpreguntas.cpp.obj	927ccd2ebceba39d
-2316	18401	7680754672953846	CMakeFiles/QTTriviaLP2.dir/ventanacrearpreguntas.cpp.obj	712be6d90bf0d5b3
-18401	19548	7680754833802067	QTTriviaLP2.exe	eb1dc86aabf14e86
-235	3717	7680755650380314	QTTriviaLP2_autogen/timestamp	d15b9d19816a07d0
-235	3717	7680755650380314	QTTriviaLP2_autogen/mocs_compilation.cpp	d15b9d19816a07d0
-235	3717	7680755650380314	C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/QTTriviaLP2_autogen/timestamp	d15b9d19816a07d0
-235	3717	7680755650380314	C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/QTTriviaLP2_autogen/mocs_compilation.cpp	d15b9d19816a07d0
-3750	14461	7680755653825890	CMakeFiles/QTTriviaLP2.dir/ventanalistausuario.cpp.obj	ba45684bf3deb9b7
-3762	14649	7680755653949910	CMakeFiles/QTTriviaLP2.dir/ventanaeditarusuario.cpp.obj	9ec45526aabc3a35
-3737	15148	7680755653706615	CMakeFiles/QTTriviaLP2.dir/ventanausuario.cpp.obj	441370840d0e5d6e
-3772	17633	7680755654059888	CMakeFiles/QTTriviaLP2.dir/menumain.cpp.obj	4f97bf4126226cf1
-3723	17932	7680755653568628	CMakeFiles/QTTriviaLP2.dir/QTTriviaLP2_autogen/mocs_compilation.cpp.obj	1650bc1c6ceb7fb0
-3834	18159	7680755654675344	CMakeFiles/QTTriviaLP2.dir/ventanaeditarcategorias.cpp.obj	91deea8021cee23e
-3797	19396	7680755654300035	CMakeFiles/QTTriviaLP2.dir/ventanacrearpreguntas.cpp.obj	712be6d90bf0d5b3
-113	1895	7680840903920428	QTTriviaLP2_autogen/timestamp	d15b9d19816a07d0
-113	1895	7680840903920428	QTTriviaLP2_autogen/mocs_compilation.cpp	d15b9d19816a07d0
-113	1895	7680840903920428	C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/QTTriviaLP2_autogen/timestamp	d15b9d19816a07d0
-113	1895	7680840903920428	C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/QTTriviaLP2_autogen/mocs_compilation.cpp	d15b9d19816a07d0
-1920	10406	7680840905759049	CMakeFiles/QTTriviaLP2.dir/ventanalistausuario.cpp.obj	ba45684bf3deb9b7
-1906	10440	7680840905626428	CMakeFiles/QTTriviaLP2.dir/main.cpp.obj	bcdb5fe569618268
-1954	10856	7680840906101056	CMakeFiles/QTTriviaLP2.dir/ventanaeditarcategorias.cpp.obj	91deea8021cee23e
-1912	10876	7680840905698484	CMakeFiles/QTTriviaLP2.dir/ventanausuario.cpp.obj	441370840d0e5d6e
-1934	10923	7680840905911457	CMakeFiles/QTTriviaLP2.dir/menumain.cpp.obj	4f97bf4126226cf1
-1928	10944	7680840905851111	CMakeFiles/QTTriviaLP2.dir/ventanaeditarusuario.cpp.obj	9ec45526aabc3a35
-1898	12224	7680840905555174	CMakeFiles/QTTriviaLP2.dir/QTTriviaLP2_autogen/mocs_compilation.cpp.obj	1650bc1c6ceb7fb0
-1947	12329	7680840906034054	CMakeFiles/QTTriviaLP2.dir/ventanaeditarpreguntas.cpp.obj	927ccd2ebceba39d
-1941	12882	7680840905973757	CMakeFiles/QTTriviaLP2.dir/ventanacrearpreguntas.cpp.obj	712be6d90bf0d5b3
-110	3118	7680841386653216	QTTriviaLP2_autogen/timestamp	d15b9d19816a07d0
-110	3118	7680841386653216	QTTriviaLP2_autogen/mocs_compilation.cpp	d15b9d19816a07d0
-110	3118	7680841386653216	C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/QTTriviaLP2_autogen/timestamp	d15b9d19816a07d0
-110	3118	7680841386653216	C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/QTTriviaLP2_autogen/mocs_compilation.cpp	d15b9d19816a07d0
-3137	12812	7680841392048024	CMakeFiles/QTTriviaLP2.dir/ventanalistausuario.cpp.obj	ba45684bf3deb9b7
-3129	13031	7680841391967634	CMakeFiles/QTTriviaLP2.dir/ventanausuario.cpp.obj	441370840d0e5d6e
-3145	13921	7680841392125842	CMakeFiles/QTTriviaLP2.dir/ventanaeditarusuario.cpp.obj	9ec45526aabc3a35
-3161	15294	7680841392284494	CMakeFiles/QTTriviaLP2.dir/ventanacrearpreguntas.cpp.obj	712be6d90bf0d5b3
-3121	16538	7680841391892170	CMakeFiles/QTTriviaLP2.dir/QTTriviaLP2_autogen/mocs_compilation.cpp.obj	1650bc1c6ceb7fb0
-3153	16694	7680841392206474	CMakeFiles/QTTriviaLP2.dir/menumain.cpp.obj	4f97bf4126226cf1
-3169	16841	7680841392365084	CMakeFiles/QTTriviaLP2.dir/ventanaeditarpreguntas.cpp.obj	927ccd2ebceba39d
-3177	16948	7680841392443023	CMakeFiles/QTTriviaLP2.dir/ventanaeditarcategorias.cpp.obj	91deea8021cee23e
-16949	17878	7680841530172882	QTTriviaLP2.exe	eb1dc86aabf14e86
+2140	16250	7682586973555294	CMakeFiles/QTTriviaLP2.dir/QTTriviaLP2_autogen/mocs_compilation.cpp.obj	1650bc1c6ceb7fb0
+518	10121	7682598355954246	CMakeFiles/QTTriviaLP2.dir/menumain.cpp.obj	4f97bf4126226cf1
+505	6871	7682598355820557	CMakeFiles/QTTriviaLP2.dir/ventanalistausuario.cpp.obj	ba45684bf3deb9b7
+513	6603	7677680732751522	CMakeFiles/QTTriviaLP2.dir/mainwindow.cpp.obj	fbc39f628ab7b989
+64	496	7682598351405557	C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/QTTriviaLP2_autogen/mocs_compilation.cpp	d15b9d19816a07d0
+84	566	7682607102806189	QTTriviaLP2_autogen/timestamp	d15b9d19816a07d0
+84	566	7682607102806189	QTTriviaLP2_autogen/mocs_compilation.cpp	d15b9d19816a07d0
+84	566	7682607102806189	C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/QTTriviaLP2_autogen/timestamp	d15b9d19816a07d0
+84	566	7682607102806189	C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/QTTriviaLP2_autogen/mocs_compilation.cpp	d15b9d19816a07d0
+575	8494	7682607107730248	CMakeFiles/QTTriviaLP2.dir/ventanalistausuario.cpp.obj	ba45684bf3deb9b7
+568	8739	7682607107649828	CMakeFiles/QTTriviaLP2.dir/ventanausuario.cpp.obj	441370840d0e5d6e
+583	9708	7682607107802100	CMakeFiles/QTTriviaLP2.dir/ventanaeditarusuario.cpp.obj	9ec45526aabc3a35
+602	9950	7682607107998287	CMakeFiles/QTTriviaLP2.dir/preguntas.cpp.obj	89f3f44342d61205
+630	11610	7682607108265213	CMakeFiles/QTTriviaLP2.dir/ventanaeditarpreguntas.cpp.obj	927ccd2ebceba39d
+609	11758	7682607108064640	CMakeFiles/QTTriviaLP2.dir/ventanacrearpreguntas.cpp.obj	712be6d90bf0d5b3
+616	11975	7682607108134957	CMakeFiles/QTTriviaLP2.dir/ventanalistarpreguntas.cpp.obj	5bf6cbb9ceea0d0c
+623	12080	7682607108205198	CMakeFiles/QTTriviaLP2.dir/ventanalistarcategorias.cpp.obj	82ad1a0944038130
+589	12141	7682607107865110	CMakeFiles/QTTriviaLP2.dir/menumain.cpp.obj	4f97bf4126226cf1
+12142	13202	7682607223388000	QTTriviaLP2.exe	bf84241b12fcc3b0
+61	531	7682607950189676	QTTriviaLP2_autogen/timestamp	d15b9d19816a07d0
+61	531	7682607950189676	QTTriviaLP2_autogen/mocs_compilation.cpp	d15b9d19816a07d0
+61	531	7682607950189676	C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/QTTriviaLP2_autogen/timestamp	d15b9d19816a07d0
+61	531	7682607950189676	C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/QTTriviaLP2_autogen/mocs_compilation.cpp	d15b9d19816a07d0
+541	7204	7682607954978918	CMakeFiles/QTTriviaLP2.dir/ventanalistausuario.cpp.obj	ba45684bf3deb9b7
+533	7549	7682607954903806	CMakeFiles/QTTriviaLP2.dir/ventanausuario.cpp.obj	441370840d0e5d6e
+547	7654	7682607955046544	CMakeFiles/QTTriviaLP2.dir/ventanaeditarusuario.cpp.obj	9ec45526aabc3a35
+554	8982	7682607955110755	CMakeFiles/QTTriviaLP2.dir/menumain.cpp.obj	4f97bf4126226cf1
+581	9302	7682607955380715	CMakeFiles/QTTriviaLP2.dir/ventanaeditarpreguntas.cpp.obj	927ccd2ebceba39d
+574	9543	7682607955315574	CMakeFiles/QTTriviaLP2.dir/ventanalistarcategorias.cpp.obj	82ad1a0944038130
+568	9619	7682607955254998	CMakeFiles/QTTriviaLP2.dir/ventanalistarpreguntas.cpp.obj	5bf6cbb9ceea0d0c
+561	9699	7682607955187499	CMakeFiles/QTTriviaLP2.dir/ventanacrearpreguntas.cpp.obj	712be6d90bf0d5b3
+9699	10704	7682608046561892	QTTriviaLP2.exe	bf84241b12fcc3b0
+217	5813	7682622482679685	QTTriviaLP2_autogen/timestamp	d15b9d19816a07d0
+217	5813	7682622482679685	QTTriviaLP2_autogen/mocs_compilation.cpp	d15b9d19816a07d0
+217	5813	7682622482679685	C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/QTTriviaLP2_autogen/timestamp	d15b9d19816a07d0
+217	5813	7682622482679685	C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/QTTriviaLP2_autogen/mocs_compilation.cpp	d15b9d19816a07d0
+5867	21475	7682622489854594	CMakeFiles/QTTriviaLP2.dir/ventanalistausuario.cpp.obj	ba45684bf3deb9b7
+5854	24255	7682622489719168	CMakeFiles/QTTriviaLP2.dir/ventanausuario.cpp.obj	441370840d0e5d6e
+5819	25659	7682622489378976	CMakeFiles/QTTriviaLP2.dir/QTTriviaLP2_autogen/mocs_compilation.cpp.obj	1650bc1c6ceb7fb0
+5912	25887	7682622490304582	CMakeFiles/QTTriviaLP2.dir/ventanacrearpreguntas.cpp.obj	712be6d90bf0d5b3
+5882	26085	7682622490004595	CMakeFiles/QTTriviaLP2.dir/ventanaeditarusuario.cpp.obj	9ec45526aabc3a35
+5837	28056	7682622489549075	CMakeFiles/QTTriviaLP2.dir/main.cpp.obj	bcdb5fe569618268
+5927	28608	7682622490444559	CMakeFiles/QTTriviaLP2.dir/ventanalistarpreguntas.cpp.obj	5bf6cbb9ceea0d0c
+5940	28828	7682622490584693	CMakeFiles/QTTriviaLP2.dir/ventanalistarcategorias.cpp.obj	82ad1a0944038130
+5898	29027	7682622490164576	CMakeFiles/QTTriviaLP2.dir/menumain.cpp.obj	4f97bf4126226cf1
+5954	29377	7682622490719987	CMakeFiles/QTTriviaLP2.dir/ventanaeditarpreguntas.cpp.obj	927ccd2ebceba39d
+29378	30894	7682622724970299	QTTriviaLP2.exe	bf84241b12fcc3b0

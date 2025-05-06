@@ -75,13 +75,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 83,
+				"line" : 85,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 64,
+				"line" : 66,
 				"parent" : 0
 			},
 			{
@@ -372,7 +372,9 @@
 				17,
 				19,
 				22,
-				25
+				25,
+				28,
+				30
 			]
 		}
 	],
@@ -503,7 +505,9 @@
 				17,
 				19,
 				22,
-				25
+				25,
+				28,
+				30
 			]
 		},
 		{
@@ -520,12 +524,15 @@
 				21,
 				24,
 				27,
-				28,
 				29,
-				30,
-				31,
 				32,
-				33
+				33,
+				34,
+				35,
+				36,
+				37,
+				38,
+				39
 			]
 		},
 		{
@@ -538,21 +545,22 @@
 				15,
 				20,
 				23,
-				26
+				26,
+				31
 			]
 		},
 		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				34
+				40
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				35
+				41
 			]
 		}
 	],
@@ -675,6 +683,49 @@
 		},
 		{
 			"backtrace" : 4,
+			"path" : "ventanalistarpreguntas.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "ventanalistarpreguntas.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "ventanalistarpreguntas.ui",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "ventanalistarcategorias.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "ventanalistarcategorias.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "ventanalistarcategorias.ui",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lectorjson.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "lectorjson.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
 			"path" : "ventanaeditarpreguntas.h",
 			"sourceGroupIndex" : 1
 		},
@@ -687,22 +738,6 @@
 		{
 			"backtrace" : 4,
 			"path" : "ventanaeditarpreguntas.ui",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 4,
-			"path" : "ventanaeditarcategorias.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 4,
-			"compileGroupIndex" : 0,
-			"path" : "ventanaeditarcategorias.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 4,
-			"path" : "ventanaeditarcategorias.ui",
 			"sourceGroupIndex" : 2
 		},
 		{
@@ -738,13 +773,19 @@
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/QTTriviaLP2_autogen/include/ui_ventanaeditarpreguntas.h",
+			"path" : "build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/QTTriviaLP2_autogen/include/ui_ventanalistarpreguntas.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/QTTriviaLP2_autogen/include/ui_ventanaeditarcategorias.h",
+			"path" : "build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/QTTriviaLP2_autogen/include/ui_ventanalistarcategorias.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/QTTriviaLP2_autogen/include/ui_ventanaeditarpreguntas.h",
 			"sourceGroupIndex" : 1
 		},
 		{

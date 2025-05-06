@@ -25,7 +25,7 @@ public:
     QString getOpcionC() const {return opcionC;}
     QString getOpcionCorrecta() const {return opcionCorrecta;}
     QString getCategoria() const {return categoria;}
-    QString getImagenPath() const {return imagenPath;}
+    QString getImagenBase64() const {return imagenBase64;}
 
     void setPregunta(QString &text) {pregunta = text;}
     void setOpcionA(QString &text) {opcionA = text;}
@@ -33,7 +33,7 @@ public:
     void setOpcionC(QString &text) {opcionC = text;}
     void setOpcionCorrecta(QString &text) {opcionCorrecta = text;}
     void setCategoria(QString &text) {categoria = text;}
-    void setImagenPath(QString &text) {imagenPath = text;}
+    void setImagenBase64(QString &text) {imagenBase64 = text;}
 
 private:
 
@@ -44,7 +44,7 @@ private:
     QString opcionC;
     QString opcionCorrecta;
     QString categoria;
-    QString imagenPath;
+    QString imagenBase64;
 };
 
 #endif // PREGUNTAS_H

@@ -1,12 +1,16 @@
 #include "ventanacrearpreguntas.h"
 #include "./ui_ventanacrearpreguntas.h"
 #include "preguntas.h"
-#include "ventanaeditarpreguntas.h"
-#include "ventanaeditarcategorias.h"
+#include "ventanalistarpreguntas.h"
+#include "ventanalistarcategorias.h"
 #include <QtWidgets/QFileDialog>
 #include <QPixmap>
+#include <QImage>
 #include <QDir>
+#include <QByteArray>
 #include <QMessageBox>
+#include <QDebug>
+#include <QBuffer>
 
 VentanaCrearPreguntas::VentanaCrearPreguntas(QWidget *parent)
     : QMainWindow(parent)
@@ -33,19 +37,60 @@ void VentanaCrearPreguntas::on_pushButton_buscarImagen_clicked()
         );
 
     if (!archivo.isEmpty()) {
+
         QPixmap imagen(archivo);
+
         if (!imagen.isNull()) {
-            ui->label_imagen->setPixmap(imagen.scaled(ui->label_imagen->size(), Qt::KeepAspectRatio));
-            ui->label_imagen->setAlignment(Qt::AlignCenter);
-            ui->label_imagen->setProperty("imagePath", archivo);
+
+            QImage imagenAux = imagen.toImage();
+            QByteArray imagenArray;
+            QBuffer buffer(&imagenArray);
+            buffer.open(QIODevice::WriteOnly);
+            imagenAux.save(&buffer, "PNG");
+
+            QByteArray imagenBase64 = imagenArray.toBase64();
+
+            QString nombreArchivo = QUuid::createUuid().toString(QUuid::WithoutBraces) + ".txt";
+            QString rutaCarpetaBase64 = "imagenes_base64/";
+            QDir CarpetaBase64(rutaCarpetaBase64);
+
+            if(!CarpetaBase64.exists()){
+                CarpetaBase64.mkpath(".");
+            }
+
+            QString rutaArchivoBase64 = rutaCarpetaBase64 + nombreArchivo;
+
+            QFile ArchivoBase64(rutaArchivoBase64);
+
+            if (ArchivoBase64.open(QIODevice::WriteOnly | QIODevice::Text)) {
+
+                QTextStream stream(&ArchivoBase64);
+
+                stream << imagenBase64.toBase64();
+                ArchivoBase64.close();
+
+                ui->label_imagen->setProperty("imagenBase64Archivo", nombreArchivo);
+                ui->label_imagen->setPixmap(imagen.scaled(ui->label_imagen->size(), Qt::KeepAspectRatio));
+                ui->label_imagen->setAlignment(Qt::AlignCenter);
+
+            } else {
+
+                QMessageBox::warning(this, tr("Error"), tr("No se pudo guardar la imagen Base64 en el archivo."));
+                ui->label_imagen->clear();
+                ui->label_imagen->setProperty("imagenBase64Archivo", QString());
+
+            }
+
         } else {
+
             QMessageBox::warning(this, tr("Error"), tr("No se pudo cargar la imagen."));
             ui->label_imagen->clear();
-            ui->label_imagen->setProperty("imagePath", QString());
+
         }
     } else {
+
         ui->label_imagen->clear();
-        ui->label_imagen->setProperty("imagePath", QString());
+        ui->label_imagen->setProperty("imagenBase64Archivo", QString());
     }
 }
 
@@ -58,7 +103,7 @@ void VentanaCrearPreguntas::on_pushButton_crearPregunta_clicked()
     QString text_opcionC = ui->lineEdit_opcionC->text().toLower();
     QString text_respuestaCorrecta = ui->lineEdit_respuestaCorrecta->text().toLower();
     QString text_categoria = ui->lineEdit_categoria->text().toLower();
-    QString imagen_path = ui->label_imagen->property("imagePath").toString();
+    QString imagen_base64 = ui->label_imagen->property("imagenBase64Archivo").toString();
 
     if(text_pregunta.isEmpty() || text_opcionA.isEmpty() || text_opcionB.isEmpty()
         || text_opcionC.isEmpty() || text_respuestaCorrecta.isEmpty() || text_categoria.isEmpty() ){
@@ -72,7 +117,7 @@ void VentanaCrearPreguntas::on_pushButton_crearPregunta_clicked()
         return;
     }
 
-    preguntas preguntaNueva(text_pregunta, text_opcionA, text_opcionB, text_opcionC, text_respuestaCorrecta, text_categoria, QUuid::createUuid().toString(), imagen_path);
+    preguntas preguntaNueva(text_pregunta, text_opcionA, text_opcionB, text_opcionC, text_respuestaCorrecta, text_categoria, QUuid::createUuid().toString(QUuid::WithoutBraces), imagen_base64);
 
     static std::vector<preguntas> listaDePreguntas;
 
@@ -87,7 +132,7 @@ void VentanaCrearPreguntas::on_pushButton_crearPregunta_clicked()
 
     QMessageBox::information(this, tr("ÉXITO"), tr("Pregunta creada y guardada."));
 
-    ui->lineEdit_pregunta->clear();//probablemente haya que cambiar a textEdit (textEdit permite el salto de linea con enter)
+    ui->lineEdit_pregunta->clear();
     ui->lineEdit_opcionA->clear();
     ui->lineEdit_opcionB->clear();
     ui->lineEdit_opcionC->clear();
@@ -98,81 +143,55 @@ void VentanaCrearPreguntas::on_pushButton_crearPregunta_clicked()
 
 void VentanaCrearPreguntas::on_pushButton_listarPreguntas_clicked()
 {
-    VentanaEditarPreguntas *ventanaEditarPreguntas = new VentanaEditarPreguntas();
+    VentanaListarPreguntas *ventanaListarPreguntas = new VentanaListarPreguntas();
 
-    if (!ventanaEditarPreguntas) {
-        ventanaEditarPreguntas = new VentanaEditarPreguntas(this);
+    if (!ventanaListarPreguntas) {
+        ventanaListarPreguntas = new VentanaListarPreguntas(this);
     }
 
-    QObject::connect(ventanaEditarPreguntas, &VentanaEditarPreguntas::destroyed, this, [this](){
+    QObject::connect(ventanaListarPreguntas, &VentanaListarPreguntas::destroyed, this, [this](){
         this->show();
     });
 
-    ventanaEditarPreguntas->cargarListaPreguntas();
-    ventanaEditarPreguntas->show();
-    this->hide();
+    if(ventanaListarPreguntas->cargarListaPreguntas()){
+
+        ventanaListarPreguntas->show();
+        this->hide();
+
+    } else{
+
+        QMessageBox::warning(this, tr("Listar Preguntas"), tr("No se ha creado ninguna pregunta."));
+
+    }
 
 }
 
 void VentanaCrearPreguntas::on_pushButton_listarCategorias_clicked()
 {
-    VentanaEditarCategorias *ventanaEditarCategorias = new VentanaEditarCategorias();
-    if(!ventanaEditarCategorias){
-        ventanaEditarCategorias = new VentanaEditarCategorias(this);
+    VentanaListarCategorias *ventanaListarCategorias = new VentanaListarCategorias();
+
+    if(!ventanaListarCategorias){
+
+        ventanaListarCategorias = new VentanaListarCategorias(this);
+
     }
 
-    connect(ventanaEditarCategorias, &VentanaEditarCategorias::destroyed, this, [this](){
+    connect(ventanaListarCategorias, &VentanaListarCategorias::destroyed, this, [this](){
         this->show();
     });
 
-    ventanaEditarCategorias->cargarListaCategorias();
-    ventanaEditarCategorias->show();
-    this->hide();
+    if (ventanaListarCategorias->cargarListaCategorias()) {
 
-}
+        ventanaListarCategorias->show();
+        this->hide();
 
-void VentanaCrearPreguntas::cargarDatosParaEdicion(QJsonObject &pregunta)
-{
-    ui->lineEdit_pregunta->setText(pregunta.value("pregunta").toString());
-    ui->lineEdit_opcionA->setText(pregunta.value("opcionA").toString());
-    ui->lineEdit_opcionB->setText(pregunta.value("opcionB").toString());
-    ui->lineEdit_opcionC->setText(pregunta.value("opcionC").toString());
-    ui->lineEdit_respuestaCorrecta->setText(pregunta.value("opcionCorrecta").toString());
-    ui->lineEdit_categoria->setText(pregunta.value("categoria").toString());
-    ui->pushButton_crearPregunta->setEnabled(false);
-}
+    } else{
 
-void VentanaCrearPreguntas::on_pushButton_editarPreguntaConfirmar_clicked()
-{
-    LectorJson lector;
-    QString pregunta = ui->lineEdit_pregunta->text();
-    QString opA = ui->lineEdit_opcionA->text();
-    QString opB = ui->lineEdit_opcionB->text();
-    QString opc = ui->lineEdit_opcionC->text();
-    QString opCorrecta = ui->lineEdit_respuestaCorrecta->text();
+        QMessageBox::warning(this, tr("Listar Categorias"), tr("No existe ninguna categoria."));
+        return;
 
-    QJsonObject preguntaEditada;
-
-    preguntaEditada["pregunta"] = pregunta;
-    preguntaEditada["opcionA"] = opA;
-    preguntaEditada["opcionB"] = opB;
-    preguntaEditada["opcionC"] = opc;
-    preguntaEditada["opcionCorrecta"] = opCorrecta;
-
-    lector.actualizarPreguntaJson(preguntaEditada);
-
-    if(actualizarPreguntaJson(preguntaEditada)){
-
-        ui->label_imagen->clear();
-        ui->lineEdit_pregunta->clear();
-        ui->lineEdit_opcionA->clear();
-        ui->lineEdit_opcionB->clear();
-        ui->lineEdit_opcionC->clear();
-        ui->lineEdit_respuestaCorrecta->clear();
-        ui->lineEdit_categoria->clear();
-    }else{
-        QMessageBox::critical(this, "Editar Pregunta", "No se pudo editar la pregunta");
     }
 
 }
+
 

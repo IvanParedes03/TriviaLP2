@@ -55,8 +55,8 @@ bool LectorJson::actualizarPreguntaJson(const QJsonObject &preguntaEditada) {
         if (preguntasArray[i].isObject()) {
             QJsonObject pregunta = preguntasArray[i].toObject();
             if (pregunta.value("id").toString() == idParaEditar) {
-                preguntasArray[i] = preguntaEditada; // Reemplaza la pregunta antigua con la editada
-                break; // Suponiendo que los IDs son únicos
+                preguntasArray[i] = preguntaEditada;
+                break;
             }
         }
     }
@@ -79,37 +79,66 @@ bool LectorJson::actualizarPreguntaJson(const QJsonObject &preguntaEditada) {
 
 bool LectorJson::borrarPreguntaJson(const QString &idPregunta)
 {
-    QJsonArray preguntasArray = leerPreguntasJson();
+    QFile archivo("preguntas.json");
 
-    if (preguntasArray.isEmpty()) {
-        qDebug() << "No se pudieron leer las preguntas del archivo o el archivo está vacío.";
+    if (!archivo.open(QIODevice::ReadWrite | QIODevice::Text)) {
+
+        qDebug() << "Error, No se pudo abrir el archivo para lectura y escritura para borrar.";
         return false;
     }
 
-    QJsonArray nuevasPreguntasArray;
-    bool borrada = false;
+    QByteArray data = archivo.readAll();
+    archivo.seek(0);
+    archivo.resize(0);
+    archivo.close();
 
-    for (const auto& preguntaObjeto : preguntasArray) {
-        if (preguntaObjeto.isObject()) {
-            QJsonObject pregunta = preguntaObjeto.toObject();
-            if (pregunta.value("id").toString() != idPregunta) {
-                nuevasPreguntasArray.append(preguntaObjeto);
+    QJsonDocument doc = QJsonDocument::fromJson(data);
+
+    if (!doc.isArray()) {
+
+        qDebug() << "Error, Formato JSON incorrecto para borrar.";
+        return false;
+
+    }
+
+    QJsonArray preguntasArray = doc.array();
+    QJsonArray nuevoArray;
+    QString nombreArchivoImagenABorrar;
+    bool preguntaEncontrada = false;
+
+    for (int i = 0; i < preguntasArray.size(); ++i) {
+        if (preguntasArray[i].isObject()) {
+            QJsonObject pregunta = preguntasArray[i].toObject();
+            if (pregunta.value("id").toString() == idPregunta) {
+                preguntaEncontrada = true;
+                nombreArchivoImagenABorrar = pregunta.value("imagenBase64File").toString();
             } else {
-                borrada = true;
+                nuevoArray.append(pregunta);
             }
         }
     }
 
-    QFile archivo("preguntas.json");
+    QJsonDocument updatedDoc(nuevoArray);
 
-    if (!archivo.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Truncate)) {
-        qDebug() << "No se pudo abrir el archivo para escritura.";
+    if (archivo.open(QIODevice::WriteOnly | QIODevice::Text)) {
+
+        archivo.write(updatedDoc.toJson(QJsonDocument::Indented));
+        archivo.close();
+        qDebug() << "Éxito, Pregunta borrada correctamente.";
+
+        if (preguntaEncontrada && !nombreArchivoImagenABorrar.isEmpty()) {
+            QString rutaCarpetaBase64 = "imagenes_Base64/";
+            QString rutaArchivoImagen = rutaCarpetaBase64 + nombreArchivoImagenABorrar;
+            QFile::remove(rutaArchivoImagen);
+            qDebug() << "Archivo de imagen borrado:" << rutaArchivoImagen;
+        }
+
+        return true;
+
+    } else {
+
+        qDebug() << "Error, No se pudo escribir en el archivo después de borrar.";
         return false;
+
     }
-
-    QJsonDocument updatedDoc(nuevasPreguntasArray);
-    archivo.write(updatedDoc.toJson(QJsonDocument::Indented));
-    archivo.close();
-
-    return borrada;
 }

@@ -32,14 +32,10 @@ private slots:
 
     void on_pushButton_listarCategorias_clicked();
 
-    void on_pushButton_editarPreguntaConfirmar_clicked();
-
 public:
 
     VentanaCrearPreguntas(QWidget *parent = nullptr);
     ~VentanaCrearPreguntas();
-
-    void cargarDatosParaEdicion(QJsonObject &pregunta);
 
 private:
 

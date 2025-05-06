@@ -7,6 +7,11 @@
 #include <QJsonDocument>
 #include <QJsonArray>
 
+/*
+ *     ARCHIVO PARA GUARDAR FUNCIONES DE QUE SE USAN EN PREGUNTAS .H
+ *  >>SI SE QUIEREN USAR ESTAS FUNCIONES SE HACE INLCUDE DE PREGUNTAS.H <<
+*/
+
 class LectorJson
 {
 

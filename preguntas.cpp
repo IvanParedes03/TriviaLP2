@@ -14,7 +14,7 @@ preguntas::preguntas()
     opcionC = QString();
     opcionCorrecta = QString();
     categoria = QString();
-    imagenPath = QString();
+    imagenBase64 = QString();
 }
 
 preguntas::preguntas (QString &p, QString &opA, QString &opB, QString &opC, QString &corr, QString &cat, const QString &Id, QString &imgP){
@@ -25,7 +25,7 @@ preguntas::preguntas (QString &p, QString &opA, QString &opB, QString &opC, QStr
     opcionC = opC;
     opcionCorrecta = corr;
     categoria = cat;
-    imagenPath = imgP;
+    imagenBase64 = imgP;
 }
 
 preguntas::~preguntas(){
@@ -45,7 +45,7 @@ void preguntas::guardarJSON(std::vector<preguntas>& pregunta){
         PREGUNTA["opcionB"] = elem.getOpcionB();
         PREGUNTA["opcionC"] = elem.getOpcionC();
         PREGUNTA["opcionCorrecta"] = elem.getOpcionCorrecta();
-        PREGUNTA["imagenPath"] = elem.getImagenPath();
+        PREGUNTA["imagenBase64File"] = elem.getImagenBase64();
 
         jsonArray.append(PREGUNTA);
     }
@@ -79,7 +79,7 @@ void preguntas::cargarJSON(std::vector<preguntas>& pregunta){
             !jsonObj.contains("opcionC") || !jsonObj["opcionC"].isString() ||
             !jsonObj.contains("opcionCorrecta") || !jsonObj["opcionCorrecta"].isString() ||
             !jsonObj.contains("categoria") || !jsonObj["categoria"].isString() ||
-            !jsonObj.contains("imagenPath") || !jsonObj["imagenPath"].isString() ) {
+            !jsonObj.contains("imagenBase64File") || !jsonObj["imagenBase64File"].isString() ) {
             std::cerr << "Objeto JSON incompleto o con tipos incorrectos." << std::endl;
             continue;
         }
@@ -91,7 +91,7 @@ void preguntas::cargarJSON(std::vector<preguntas>& pregunta){
         QString qOpcionC = jsonObj["opcionC"].toString();
         QString qOpcionCorrecta = jsonObj["opcionCorrecta"].toString();
         QString qCategoria = jsonObj["categoria"].toString();
-        QString qImagenPath = jsonObj["imagenPath"].toString();
+        QString qImagenPath = jsonObj["imagenBase64File"].toString();
 
         preguntas p(qPregunta, qOpcionA, qOpcionB, qOpcionC, qOpcionCorrecta, qCategoria, qId, qImagenPath);
         pregunta.push_back(p);

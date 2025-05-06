@@ -38,9 +38,10 @@ struct qt_meta_tag_ZN22VentanaEditarPreguntasE_t {};
 #ifdef QT_MOC_HAS_STRINGDATA
 static constexpr auto qt_meta_stringdata_ZN22VentanaEditarPreguntasE = QtMocHelpers::stringData(
     "VentanaEditarPreguntas",
-    "signalEditarPreguntaSeleccionada",
+    "preguntaEditadaGuardada",
     "",
-    "pregunta"
+    "on_pushButton_editarPregunta_clicked",
+    "on_pushButton_buscarImagenEditar_clicked"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -52,7 +53,7 @@ Q_CONSTINIT static const uint qt_meta_data_ZN22VentanaEditarPreguntasE[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       1,   14, // methods
+       3,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -60,16 +61,24 @@ Q_CONSTINIT static const uint qt_meta_data_ZN22VentanaEditarPreguntasE[] = {
        1,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    1,   20,    2, 0x06,    1 /* Public */,
+       1,    0,   32,    2, 0x06,    1 /* Public */,
+
+ // slots: name, argc, parameters, tag, flags, initial metatype offsets
+       3,    0,   33,    2, 0x08,    2 /* Private */,
+       4,    0,   34,    2, 0x08,    3 /* Private */,
 
  // signals: parameters
-    QMetaType::Void, QMetaType::QJsonObject,    3,
+    QMetaType::Void,
+
+ // slots: parameters
+    QMetaType::Void,
+    QMetaType::Void,
 
        0        // eod
 };
 
 Q_CONSTINIT const QMetaObject VentanaEditarPreguntas::staticMetaObject = { {
-    QMetaObject::SuperData::link<QWidget::staticMetaObject>(),
+    QMetaObject::SuperData::link<QDialog::staticMetaObject>(),
     qt_meta_stringdata_ZN22VentanaEditarPreguntasE.offsetsAndSizes,
     qt_meta_data_ZN22VentanaEditarPreguntasE,
     qt_static_metacall,
@@ -77,9 +86,12 @@ Q_CONSTINIT const QMetaObject VentanaEditarPreguntas::staticMetaObject = { {
     qt_incomplete_metaTypeArray<qt_meta_tag_ZN22VentanaEditarPreguntasE_t,
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<VentanaEditarPreguntas, std::true_type>,
-        // method 'signalEditarPreguntaSeleccionada'
+        // method 'preguntaEditadaGuardada'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<const QJsonObject &, std::false_type>
+        // method 'on_pushButton_editarPregunta_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_pushButton_buscarImagenEditar_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
 } };
@@ -89,15 +101,17 @@ void VentanaEditarPreguntas::qt_static_metacall(QObject *_o, QMetaObject::Call _
     auto *_t = static_cast<VentanaEditarPreguntas *>(_o);
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: _t->signalEditarPreguntaSeleccionada((*reinterpret_cast< std::add_pointer_t<QJsonObject>>(_a[1]))); break;
+        case 0: _t->preguntaEditadaGuardada(); break;
+        case 1: _t->on_pushButton_editarPregunta_clicked(); break;
+        case 2: _t->on_pushButton_buscarImagenEditar_clicked(); break;
         default: ;
         }
     }
     if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
         {
-            using _q_method_type = void (VentanaEditarPreguntas::*)(const QJsonObject & );
-            if (_q_method_type _q_method = &VentanaEditarPreguntas::signalEditarPreguntaSeleccionada; *reinterpret_cast<_q_method_type *>(_a[1]) == _q_method) {
+            using _q_method_type = void (VentanaEditarPreguntas::*)();
+            if (_q_method_type _q_method = &VentanaEditarPreguntas::preguntaEditadaGuardada; *reinterpret_cast<_q_method_type *>(_a[1]) == _q_method) {
                 *result = 0;
                 return;
             }
@@ -115,33 +129,30 @@ void *VentanaEditarPreguntas::qt_metacast(const char *_clname)
     if (!_clname) return nullptr;
     if (!strcmp(_clname, qt_meta_stringdata_ZN22VentanaEditarPreguntasE.stringdata0))
         return static_cast<void*>(this);
-    if (!strcmp(_clname, "preguntas"))
-        return static_cast< preguntas*>(this);
-    return QWidget::qt_metacast(_clname);
+    return QDialog::qt_metacast(_clname);
 }
 
 int VentanaEditarPreguntas::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
-    _id = QWidget::qt_metacall(_c, _id, _a);
+    _id = QDialog::qt_metacall(_c, _id, _a);
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 1)
+        if (_id < 3)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 1;
+        _id -= 3;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 1)
+        if (_id < 3)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 1;
+        _id -= 3;
     }
     return _id;
 }
 
 // SIGNAL 0
-void VentanaEditarPreguntas::signalEditarPreguntaSeleccionada(const QJsonObject & _t1)
+void VentanaEditarPreguntas::preguntaEditadaGuardada()
 {
-    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
-    QMetaObject::activate(this, &staticMetaObject, 0, _a);
+    QMetaObject::activate(this, &staticMetaObject, 0, nullptr);
 }
 QT_WARNING_POP

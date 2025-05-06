@@ -371,12 +371,6 @@
 			null
 		],
 		[
-			"C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/ventanaeditarcategorias.h",
-			"MU",
-			"EWIEGA46WW/moc_ventanaeditarcategorias.cpp",
-			null
-		],
-		[
 			"C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/ventanaeditarpreguntas.h",
 			"MU",
 			"EWIEGA46WW/moc_ventanaeditarpreguntas.cpp",
@@ -386,6 +380,18 @@
 			"C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/ventanaeditarusuario.h",
 			"MU",
 			"EWIEGA46WW/moc_ventanaeditarusuario.cpp",
+			null
+		],
+		[
+			"C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/ventanalistarcategorias.h",
+			"MU",
+			"EWIEGA46WW/moc_ventanalistarcategorias.cpp",
+			null
+		],
+		[
+			"C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/ventanalistarpreguntas.h",
+			"MU",
+			"EWIEGA46WW/moc_ventanalistarpreguntas.cpp",
 			null
 		],
 		[
@@ -503,17 +509,22 @@
 			null
 		],
 		[
-			"C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/ventanaeditarcategorias.cpp",
-			"MU",
-			null
-		],
-		[
 			"C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/ventanaeditarpreguntas.cpp",
 			"MU",
 			null
 		],
 		[
 			"C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/ventanaeditarusuario.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/ventanalistarcategorias.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/ventanalistarpreguntas.cpp",
 			"MU",
 			null
 		],

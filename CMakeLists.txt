@@ -36,9 +36,10 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         menumain.h menumain.cpp menumain.ui
         preguntas.h preguntas.cpp
         ventanacrearpreguntas.h ventanacrearpreguntas.cpp ventanacrearpreguntas.ui
-        ventanaeditarpreguntas.h ventanaeditarpreguntas.cpp ventanaeditarpreguntas.ui
-        ventanaeditarcategorias.h ventanaeditarcategorias.cpp ventanaeditarcategorias.ui
+        ventanalistarpreguntas.h ventanalistarpreguntas.cpp ventanalistarpreguntas.ui
+        ventanalistarcategorias.h ventanalistarcategorias.cpp ventanalistarcategorias.ui
         lectorjson.h lectorjson.cpp
+        ventanaeditarpreguntas.h ventanaeditarpreguntas.cpp ventanaeditarpreguntas.ui
 
 
 

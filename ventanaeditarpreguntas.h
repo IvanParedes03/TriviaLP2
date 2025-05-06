@@ -1,46 +1,42 @@
 #ifndef VENTANAEDITARPREGUNTAS_H
 #define VENTANAEDITARPREGUNTAS_H
 
-#include "preguntas.h"
-#include <QWidget>
-#include <QListWidgetItem>
+#include "lectorjson.h"
 #include <QJsonObject>
+#include <QJsonArray>
+#include <QDialog>
 
 namespace Ui {
 class VentanaEditarPreguntas;
 }
 
-class VentanaEditarPreguntas : public QWidget, public preguntas
+class VentanaEditarPreguntas : public QDialog
 {
     Q_OBJECT
 
-signals:
+public:
 
-    void signalEditarPreguntaSeleccionada(const QJsonObject& pregunta);
+    explicit VentanaEditarPreguntas(const QJsonObject &preguntaAEditar,  QWidget *parent = nullptr);
+    ~VentanaEditarPreguntas();
+
+     void cargarDatosParaEdicion(const QJsonObject &pregunta);
 
 private slots:
 
-    // on_pushButton_editarPreguntaSeleccionada_clicked();
+    void on_pushButton_editarPregunta_clicked();
 
-public:
-
-    explicit VentanaEditarPreguntas(QWidget *parent = nullptr);
-    ~VentanaEditarPreguntas();
-
-    void cargarListaPreguntas();
-    void elementoSeleccionadoPregunta(QListWidgetItem *elemActual, QListWidgetItem *elemAnterior);
-    QJsonObject obtenerElementoPregunta();
+    void on_pushButton_buscarImagenEditar_clicked();
 
 private:
 
     Ui::VentanaEditarPreguntas *ui;
-    QString idPreguntaSeleccionada;
-    QJsonObject preguntaSeleccionada;
+    QJsonObject preguntaEditando;
+    LectorJson lectorJSON;
+    QString idPreguntaEditable;
 
-protected:
+signals:
 
-    void showEvent(QShowEvent *event) override;
-
+    void preguntaEditadaGuardada();
 };
 
 #endif // VENTANAEDITARPREGUNTAS_H
