@@ -1,10 +1,10 @@
 #ifndef VENTANAEDITARPREGUNTAS_H
 #define VENTANAEDITARPREGUNTAS_H
 
-#include "lectorjson.h"
-#include <QJsonObject>
-#include <QJsonArray>
 #include <QDialog>
+#include <QJsonArray>
+#include <QJsonObject>
+#include "lectorjson.h"
 
 namespace Ui {
 class VentanaEditarPreguntas;
@@ -15,11 +15,10 @@ class VentanaEditarPreguntas : public QDialog
     Q_OBJECT
 
 public:
-
-    explicit VentanaEditarPreguntas(const QJsonObject &preguntaAEditar,  QWidget *parent = nullptr);
+    explicit VentanaEditarPreguntas(const QJsonObject &preguntaAEditar, QWidget *parent = nullptr);
     ~VentanaEditarPreguntas();
 
-     void cargarDatosParaEdicion(const QJsonObject &pregunta);
+    void cargarDatosParaEdicion(const QJsonObject &pregunta);
 
 private slots:
 
@@ -28,7 +27,6 @@ private slots:
     void on_pushButton_buscarImagenEditar_clicked();
 
 private:
-
     Ui::VentanaEditarPreguntas *ui;
     QJsonObject preguntaEditando;
     LectorJson lectorJSON;

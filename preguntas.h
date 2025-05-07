@@ -1,42 +1,47 @@
 #ifndef PREGUNTAS_H
 #define PREGUNTAS_H
 
-#include "lectorjson.h"
+#include <QListWidget>
 #include <QMainWindow>
 #include <QString>
 #include <QUuid>
-#include <QListWidget>
+#include "lectorjson.h"
 
-class preguntas: public LectorJson
+class preguntas : public LectorJson
 {
 public:
-
     preguntas();
-    preguntas(QString &, QString &, QString &, QString &, QString &, QString &, const QString &, QString &);
+    preguntas(QString &,
+              QString &,
+              QString &,
+              QString &,
+              QString &,
+              QString &,
+              const QString &,
+              QString &);
     ~preguntas();
 
-    void guardarJSON(std::vector<preguntas>& pregunta);
-    void cargarJSON(std::vector<preguntas>& pregunta);
+    void guardarJSON(std::vector<preguntas> &pregunta);
+    void cargarJSON(std::vector<preguntas> &pregunta);
 
-    QString getId() const {return id;}
-    QString getPregunta() const {return pregunta;}
-    QString getOpcionA() const {return opcionA;}
-    QString getOpcionB() const {return opcionB;}
-    QString getOpcionC() const {return opcionC;}
-    QString getOpcionCorrecta() const {return opcionCorrecta;}
-    QString getCategoria() const {return categoria;}
-    QString getImagenBase64() const {return imagenBase64;}
+    QString getId() const { return id; }
+    QString getPregunta() const { return pregunta; }
+    QString getOpcionA() const { return opcionA; }
+    QString getOpcionB() const { return opcionB; }
+    QString getOpcionC() const { return opcionC; }
+    QString getOpcionCorrecta() const { return opcionCorrecta; }
+    QString getCategoria() const { return categoria; }
+    QString getImagenBase64() const { return imagenBase64; }
 
-    void setPregunta(QString &text) {pregunta = text;}
-    void setOpcionA(QString &text) {opcionA = text;}
-    void setOpcionB(QString &text) {opcionC = text;}
-    void setOpcionC(QString &text) {opcionC = text;}
-    void setOpcionCorrecta(QString &text) {opcionCorrecta = text;}
-    void setCategoria(QString &text) {categoria = text;}
-    void setImagenBase64(QString &text) {imagenBase64 = text;}
+    void setPregunta(QString &text) { pregunta = text; }
+    void setOpcionA(QString &text) { opcionA = text; }
+    void setOpcionB(QString &text) { opcionC = text; }
+    void setOpcionC(QString &text) { opcionC = text; }
+    void setOpcionCorrecta(QString &text) { opcionCorrecta = text; }
+    void setCategoria(QString &text) { categoria = text; }
+    void setImagenBase64(QString &text) { imagenBase64 = text; }
 
 private:
-
     QString id;
     QString pregunta;
     QString opcionA;

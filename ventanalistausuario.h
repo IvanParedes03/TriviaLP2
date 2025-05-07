@@ -2,9 +2,9 @@
 #define VENTANALISTAUSUARIO_H
 
 #include <QDialog>
-#include <vector>
-#include "ventanausuario.h"
 #include "classusuario.h"
+#include "ventanausuario.h"
+#include <vector>
 
 namespace Ui {
 class ventanaListaUsuario;
@@ -15,7 +15,7 @@ class ventanaListaUsuario : public QDialog
     Q_OBJECT
 
 public:
-    explicit ventanaListaUsuario(std::vector<Usuario>& usuarios, QWidget *parent = nullptr);
+    explicit ventanaListaUsuario(std::vector<Usuario> &usuarios, QWidget *parent = nullptr);
     ~ventanaListaUsuario();
 
 private slots:
@@ -25,6 +25,7 @@ private slots:
     void refreshLista();
     void abrirVentanaEditarUsuario();
     void eliminarUsuario();
+
 private:
     Ui::ventanaListaUsuario *ui;
     int iteradorUsuario;

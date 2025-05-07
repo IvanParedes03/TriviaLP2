@@ -1,13 +1,15 @@
 #include "lectorjson.h"
-#include <iostream>
 #include <QMessageBox>
+#include <iostream>
 
 QJsonArray LectorJson::leerPreguntasJson()
 {
     QFile archivo("preguntas.json");
 
     if (!archivo.open(QIODevice::ReadOnly)) {
-        std::cerr << "No se pudo abrir el archivo preguntas.json para lectura o este archivo aun no existe." << std::endl;
+        std::cerr << "No se pudo abrir el archivo preguntas.json para lectura o este archivo aun "
+                     "no existe."
+                  << std::endl;
         return QJsonArray();
     }
 
@@ -27,11 +29,10 @@ QJsonArray LectorJson::leerPreguntasJson()
     }
 
     return docJson.array();
-
 }
 
-bool LectorJson::actualizarPreguntaJson(const QJsonObject &preguntaEditada) {
-
+bool LectorJson::actualizarPreguntaJson(const QJsonObject &preguntaEditada)
+{
     QFile archivo("preguntas.json");
 
     if (!archivo.open(QIODevice::ReadWrite | QIODevice::Text)) {
@@ -63,17 +64,14 @@ bool LectorJson::actualizarPreguntaJson(const QJsonObject &preguntaEditada) {
 
     QJsonDocument updatedDoc(preguntasArray);
     if (archivo.open(QIODevice::WriteOnly | QIODevice::Text)) {
-
         archivo.write(updatedDoc.toJson(QJsonDocument::Indented));
         archivo.close();
         qDebug() << "Éxito, Pregunta actualizada correctamente.";
         return true;
 
     } else {
-
         qDebug() << "Error, No se pudo escribir en el archivo.";
         return false;
-
     }
 }
 
@@ -82,7 +80,6 @@ bool LectorJson::borrarPreguntaJson(const QString &idPregunta)
     QFile archivo("preguntas.json");
 
     if (!archivo.open(QIODevice::ReadWrite | QIODevice::Text)) {
-
         qDebug() << "Error, No se pudo abrir el archivo para lectura y escritura para borrar.";
         return false;
     }
@@ -95,10 +92,8 @@ bool LectorJson::borrarPreguntaJson(const QString &idPregunta)
     QJsonDocument doc = QJsonDocument::fromJson(data);
 
     if (!doc.isArray()) {
-
         qDebug() << "Error, Formato JSON incorrecto para borrar.";
         return false;
-
     }
 
     QJsonArray preguntasArray = doc.array();
@@ -121,7 +116,6 @@ bool LectorJson::borrarPreguntaJson(const QString &idPregunta)
     QJsonDocument updatedDoc(nuevoArray);
 
     if (archivo.open(QIODevice::WriteOnly | QIODevice::Text)) {
-
         archivo.write(updatedDoc.toJson(QJsonDocument::Indented));
         archivo.close();
         qDebug() << "Éxito, Pregunta borrada correctamente.";
@@ -136,9 +130,7 @@ bool LectorJson::borrarPreguntaJson(const QString &idPregunta)
         return true;
 
     } else {
-
         qDebug() << "Error, No se pudo escribir en el archivo después de borrar.";
         return false;
-
     }
 }

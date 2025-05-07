@@ -24,12 +24,14 @@ VentanaUsuario::VentanaUsuario(QWidget *parent)
     ui->nombreUsuarioInput->setValidator(validatorNombre);
     ui->aliasUsuarioInput->setValidator(validatorAlias);
 
-     //conexion de botones de crear usuario y listar usuario
+    //conexion de botones de crear usuario y listar usuario
     connect(ui->botonCrearUsuario, &QPushButton::clicked, this, &VentanaUsuario::CrearUsuario);
     connect(ui->botonListarUsuarios, &QPushButton::clicked, this, &VentanaUsuario::ListarUsuarios);
     connect(ui->botonVolver, &QPushButton::clicked, this, &VentanaUsuario::close);
 
     Usuario::cargarJSON(Usuarios);
+    Usuario u;
+    u.debugUsuarios(Usuarios);
 
 }
 
@@ -49,7 +51,15 @@ void VentanaUsuario::CrearUsuario(){ //crea un usuario y hace push al vector de 
         return;
     }
 
-    Usuario nuevoUsuario(nombre.toStdString(), alias.toStdString());
+    for (auto &elem: Usuarios){
+        if (alias == elem.getAlias()){
+            QMessageBox::warning(this, "Usuario repetiro", "Este alias no esta disponible");
+            ui->aliasUsuarioInput->clear();
+            return;
+        }
+    }
+
+    Usuario nuevoUsuario(nombre.toStdString(), alias.toStdString(), 0);
     Usuarios.push_back(nuevoUsuario);
     Usuario::guardarJSON(Usuarios);
     QMessageBox::information(this, "Usuario creado", "Usuario creado correctamente");

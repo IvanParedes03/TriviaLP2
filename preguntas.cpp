@@ -1,9 +1,9 @@
 #include "preguntas.h"
-#include <iostream>
-#include <QJsonObject>
+#include <QFile>
 #include <QJsonArray>
 #include <QJsonDocument>
-#include <QFile>
+#include <QJsonObject>
+#include <iostream>
 
 preguntas::preguntas()
 {
@@ -17,7 +17,15 @@ preguntas::preguntas()
     imagenBase64 = QString();
 }
 
-preguntas::preguntas (QString &p, QString &opA, QString &opB, QString &opC, QString &corr, QString &cat, const QString &Id, QString &imgP){
+preguntas::preguntas(QString &p,
+                     QString &opA,
+                     QString &opB,
+                     QString &opC,
+                     QString &corr,
+                     QString &cat,
+                     const QString &Id,
+                     QString &imgP)
+{
     id = Id;
     pregunta = p;
     opcionA = opA;
@@ -28,14 +36,15 @@ preguntas::preguntas (QString &p, QString &opA, QString &opB, QString &opC, QStr
     imagenBase64 = imgP;
 }
 
-preguntas::~preguntas(){
+preguntas::~preguntas()
+{
     std::cout << "Se ha eliminado el objeto preguntas..." << std::endl;
 }
 
-void preguntas::guardarJSON(std::vector<preguntas>& pregunta){
+void preguntas::guardarJSON(std::vector<preguntas> &pregunta)
+{
     QJsonArray jsonArray;
-    for(auto& elem : pregunta){
-
+    for (auto &elem : pregunta) {
         QJsonObject PREGUNTA;
 
         PREGUNTA["id"] = elem.getId();
@@ -53,18 +62,18 @@ void preguntas::guardarJSON(std::vector<preguntas>& pregunta){
     QJsonDocument doc(jsonArray);
     QFile archivo("preguntas.json");
 
-    if(archivo.open(QIODevice::WriteOnly)){
+    if (archivo.open(QIODevice::WriteOnly)) {
         std::cout << "json escrito" << std::endl;
         archivo.write(doc.toJson());
         archivo.close();
     }
 }
 
-void preguntas::cargarJSON(std::vector<preguntas>& pregunta){
-
+void preguntas::cargarJSON(std::vector<preguntas> &pregunta)
+{
     QJsonArray jsonPreguntas = leerPreguntasJson();
 
-    for (const auto& elem : jsonPreguntas) {
+    for (const auto &elem : jsonPreguntas) {
         if (!elem.isObject()) {
             std::cerr << "Elemento inválido en el array JSON (no es un objeto)." << std::endl;
             continue;
@@ -72,14 +81,14 @@ void preguntas::cargarJSON(std::vector<preguntas>& pregunta){
 
         QJsonObject jsonObj = elem.toObject();
 
-        if (!jsonObj.contains("id") || !jsonObj["id"].isString() ||
-            !jsonObj.contains("pregunta") || !jsonObj["pregunta"].isString() ||
-            !jsonObj.contains("opcionA") || !jsonObj["opcionA"].isString() ||
-            !jsonObj.contains("opcionB") || !jsonObj["opcionB"].isString() ||
-            !jsonObj.contains("opcionC") || !jsonObj["opcionC"].isString() ||
-            !jsonObj.contains("opcionCorrecta") || !jsonObj["opcionCorrecta"].isString() ||
-            !jsonObj.contains("categoria") || !jsonObj["categoria"].isString() ||
-            !jsonObj.contains("imagenBase64File") || !jsonObj["imagenBase64File"].isString() ) {
+        if (!jsonObj.contains("id") || !jsonObj["id"].isString() || !jsonObj.contains("pregunta")
+            || !jsonObj["pregunta"].isString() || !jsonObj.contains("opcionA")
+            || !jsonObj["opcionA"].isString() || !jsonObj.contains("opcionB")
+            || !jsonObj["opcionB"].isString() || !jsonObj.contains("opcionC")
+            || !jsonObj["opcionC"].isString() || !jsonObj.contains("opcionCorrecta")
+            || !jsonObj["opcionCorrecta"].isString() || !jsonObj.contains("categoria")
+            || !jsonObj["categoria"].isString() || !jsonObj.contains("imagenBase64File")
+            || !jsonObj["imagenBase64File"].isString()) {
             std::cerr << "Objeto JSON incompleto o con tipos incorrectos." << std::endl;
             continue;
         }
@@ -93,7 +102,14 @@ void preguntas::cargarJSON(std::vector<preguntas>& pregunta){
         QString qCategoria = jsonObj["categoria"].toString();
         QString qImagenPath = jsonObj["imagenBase64File"].toString();
 
-        preguntas p(qPregunta, qOpcionA, qOpcionB, qOpcionC, qOpcionCorrecta, qCategoria, qId, qImagenPath);
+        preguntas p(qPregunta,
+                    qOpcionA,
+                    qOpcionB,
+                    qOpcionC,
+                    qOpcionCorrecta,
+                    qCategoria,
+                    qId,
+                    qImagenPath);
         pregunta.push_back(p);
     }
 }

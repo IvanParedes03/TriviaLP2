@@ -1,10 +1,10 @@
 #ifndef VENTANALISTARPREGUNTAS_H
 #define VENTANALISTARPREGUNTAS_H
 
-#include "preguntas.h"
-#include <QWidget>
-#include <QListWidgetItem>
 #include <QJsonObject>
+#include <QListWidgetItem>
+#include <QWidget>
+#include "preguntas.h"
 
 namespace Ui {
 class VentanaListarPreguntas;
@@ -16,7 +16,7 @@ class VentanaListarPreguntas : public QWidget, public preguntas
 
 signals:
 
-    void signalListarPreguntaSeleccionada(const QJsonObject& pregunta);
+    void signalListarPreguntaSeleccionada(const QJsonObject &pregunta);
 
 private slots:
 
@@ -25,7 +25,6 @@ private slots:
     void on_pushButton_borrarPreguntaSeleccionada_clicked();
 
 public:
-
     explicit VentanaListarPreguntas(QWidget *parent = nullptr);
     ~VentanaListarPreguntas();
 
@@ -34,15 +33,12 @@ public:
     QJsonObject obtenerElementoPregunta();
 
 private:
-
     Ui::VentanaListarPreguntas *ui;
     QString idPreguntaSeleccionada;
     QJsonObject preguntaSeleccionada;
 
 protected:
-
     void showEvent(QShowEvent *event) override;
-
 };
 
 #endif // VENTANALISTARPREGUNTAS_H

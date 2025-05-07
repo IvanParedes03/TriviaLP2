@@ -1,8 +1,8 @@
 #include "ventanalistarcategorias.h"
-#include "ui_ventanalistarcategorias.h"
-#include <QFile>
 #include <QDebug>
+#include <QFile>
 #include <QMessageBox>
+#include "ui_ventanalistarcategorias.h"
 
 VentanaListarCategorias::VentanaListarCategorias(QWidget *parent)
     : QWidget(parent)
@@ -11,8 +11,10 @@ VentanaListarCategorias::VentanaListarCategorias(QWidget *parent)
 {
     setAttribute(Qt::WA_DeleteOnClose, true);
     ui->setupUi(this);
-    connect(ui->listWidget_listaCategorias, &QListWidget::currentItemChanged,
-            this, &VentanaListarCategorias::elementoSeleccionadoCategoria);
+    connect(ui->listWidget_listaCategorias,
+            &QListWidget::currentItemChanged,
+            this,
+            &VentanaListarCategorias::elementoSeleccionadoCategoria);
 }
 
 VentanaListarCategorias::~VentanaListarCategorias()
@@ -32,17 +34,15 @@ void VentanaListarCategorias::showEvent(QShowEvent *event)
 
 bool VentanaListarCategorias::cargarListaCategorias()
 {
-
     QJsonArray preguntasJson = leerPreguntasJson();
 
-    if(preguntasJson.isEmpty()){
+    if (preguntasJson.isEmpty()) {
         return false;
     }
 
     QSet<QString> categoriasUnicas;
 
-    for (const auto& preguntaObjeto : preguntasJson) {
-
+    for (const auto &preguntaObjeto : preguntasJson) {
         if (preguntaObjeto.isObject()) {
             QJsonObject preguntaJson = preguntaObjeto.toObject();
             QString categoria = preguntaJson.value("categoria").toString();
@@ -50,21 +50,21 @@ bool VentanaListarCategorias::cargarListaCategorias()
         }
     }
 
-    for (const QString& categoria : categoriasUnicas) {
+    for (const QString &categoria : categoriasUnicas) {
         QListWidgetItem *item = new QListWidgetItem(categoria);
         ui->listWidget_listaCategorias->addItem(item);
     }
 
     return true;
-
 }
 
-void VentanaListarCategorias::elementoSeleccionadoCategoria(QListWidgetItem *elemActual, QListWidgetItem *elemAnterior)
+void VentanaListarCategorias::elementoSeleccionadoCategoria(QListWidgetItem *elemActual,
+                                                            QListWidgetItem *elemAnterior)
 {
     if (elemActual) {
         VentanaListarCategorias::categoriaSeleccionada = elemActual;
         ui->pushButton_borrarCategoriaSeleccionada->setEnabled(true);
-    }else{
+    } else {
         VentanaListarCategorias::categoriaSeleccionada = nullptr;
         ui->pushButton_borrarCategoriaSeleccionada->setEnabled(false);
     }
@@ -72,7 +72,7 @@ void VentanaListarCategorias::elementoSeleccionadoCategoria(QListWidgetItem *ele
 
 QString VentanaListarCategorias::obtenerElementoCategoria() const
 {
-    if(VentanaListarCategorias::categoriaSeleccionada){
+    if (VentanaListarCategorias::categoriaSeleccionada) {
         return VentanaListarCategorias::categoriaSeleccionada->text();
     }
 
@@ -84,18 +84,25 @@ void VentanaListarCategorias::on_pushButton_borrarCategoriaSeleccionada_clicked(
     QString categoriaABorrar = obtenerElementoCategoria();
 
     if (categoriaABorrar.isEmpty()) {
-        QMessageBox::warning(this, tr("Borrar Categoría"), tr("Por favor, selecciona una categoría para borrar."));
+        QMessageBox::warning(this,
+                             tr("Borrar Categoría"),
+                             tr("Por favor, selecciona una categoría para borrar."));
         return;
     }
 
-    QMessageBox::StandardButton respuesta = QMessageBox::question(this, tr("Borrar Categoría"),
-                                                                  tr("¿Estás seguro de que deseas borrar la categoría '%1' y todas sus preguntas?").arg(categoriaABorrar),
-                                                                  QMessageBox::Yes | QMessageBox::No);
+    QMessageBox::StandardButton respuesta = QMessageBox::question(
+        this,
+        tr("Borrar Categoría"),
+        tr("¿Estás seguro de que deseas borrar la categoría '%1' y todas sus preguntas?")
+            .arg(categoriaABorrar),
+        QMessageBox::Yes | QMessageBox::No);
     if (respuesta == QMessageBox::Yes) {
         QFile archivo("preguntas.json");
         if (!archivo.open(QIODevice::ReadWrite | QIODevice::Text)) {
             qDebug() << "Error al abrir el archivo preguntas.json para lectura y escritura.";
-            QMessageBox::critical(this, tr("Error"), tr("No se pudo abrir el archivo de preguntas."));
+            QMessageBox::critical(this,
+                                  tr("Error"),
+                                  tr("No se pudo abrir el archivo de preguntas."));
             return;
         }
         QByteArray data = archivo.readAll();
@@ -106,7 +113,9 @@ void VentanaListarCategorias::on_pushButton_borrarCategoriaSeleccionada_clicked(
         QJsonDocument doc = QJsonDocument::fromJson(data);
         if (!doc.isArray()) {
             qDebug() << "Error: El formato de preguntas.json no es un array.";
-            QMessageBox::critical(this, tr("Error"), tr("Formato de archivo de preguntas incorrecto."));
+            QMessageBox::critical(this,
+                                  tr("Error"),
+                                  tr("Formato de archivo de preguntas incorrecto."));
             return;
         }
 
@@ -114,7 +123,7 @@ void VentanaListarCategorias::on_pushButton_borrarCategoriaSeleccionada_clicked(
         QJsonArray nuevoArray;
         int preguntasBorradas = 0;
 
-        for (const auto& preguntaObjeto : preguntasArray) {
+        for (const auto &preguntaObjeto : preguntasArray) {
             if (preguntaObjeto.isObject()) {
                 QJsonObject preguntaJson = preguntaObjeto.toObject();
                 QString categoria = preguntaJson.value("categoria").toString();
@@ -127,7 +136,8 @@ void VentanaListarCategorias::on_pushButton_borrarCategoriaSeleccionada_clicked(
                         QString rutaCarpetaBase64 = "imagenes_base64/";
                         QString rutaArchivoImagen = rutaCarpetaBase64 + nombreArchivoImagen;
                         QFile::remove(rutaArchivoImagen);
-                        qDebug() << "Archivo de imagen borrado al eliminar categoría:" << rutaArchivoImagen;
+                        qDebug() << "Archivo de imagen borrado al eliminar categoría:"
+                                 << rutaArchivoImagen;
                     }
                 }
             }
@@ -137,13 +147,20 @@ void VentanaListarCategorias::on_pushButton_borrarCategoriaSeleccionada_clicked(
         if (archivo.open(QIODevice::WriteOnly | QIODevice::Text)) {
             archivo.write(updatedDoc.toJson(QJsonDocument::Indented));
             archivo.close();
-            QMessageBox::information(this, tr("Éxito"), tr("Categoría '%1' y %2 preguntas asociadas borradas correctamente.").arg(categoriaABorrar).arg(preguntasBorradas));
+            QMessageBox::information(
+                this,
+                tr("Éxito"),
+                tr("Categoría '%1' y %2 preguntas asociadas borradas correctamente.")
+                    .arg(categoriaABorrar)
+                    .arg(preguntasBorradas));
             cargarListaCategorias();
             ui->pushButton_borrarCategoriaSeleccionada->setEnabled(false);
             categoriaSeleccionada = nullptr;
         } else {
             qDebug() << "Error al escribir en el archivo preguntas.json.";
-            QMessageBox::critical(this, tr("Error"), tr("No se pudo guardar los cambios en el archivo de preguntas."));
+            QMessageBox::critical(this,
+                                  tr("Error"),
+                                  tr("No se pudo guardar los cambios en el archivo de preguntas."));
         }
     }
 }

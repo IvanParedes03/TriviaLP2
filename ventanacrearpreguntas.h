@@ -1,11 +1,11 @@
 #ifndef VENTANACREARPREGUNTAS_H
 #define VENTANACREARPREGUNTAS_H
 
-#include "preguntas.h"
-#include <QMainWindow>
+#include <QDebug>
 #include <QFile>
 #include <QListWidgetItem>
-#include <QDebug>
+#include <QMainWindow>
+#include "preguntas.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -15,7 +15,6 @@ QT_END_NAMESPACE
 
 class VentanaCrearPreguntas : public QMainWindow, public preguntas
 {
-
     Q_OBJECT
 
 signals:
@@ -33,16 +32,11 @@ private slots:
     void on_pushButton_listarCategorias_clicked();
 
 public:
-
     VentanaCrearPreguntas(QWidget *parent = nullptr);
     ~VentanaCrearPreguntas();
 
 private:
-
     Ui::VentanaCrearPreguntas *ui;
-
 };
-
-
 
 #endif // VENTANACREARPREGUNTAS_H

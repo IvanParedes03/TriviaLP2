@@ -2,10 +2,10 @@
 #define LECTORJSON_H
 
 #include <QFile>
-#include <QObject>
-#include <QJsonObject>
-#include <QJsonDocument>
 #include <QJsonArray>
+#include <QJsonDocument>
+#include <QJsonObject>
+#include <QObject>
 
 /*
  *     ARCHIVO PARA GUARDAR FUNCIONES DE QUE SE USAN EN PREGUNTAS .H
@@ -14,15 +14,12 @@
 
 class LectorJson
 {
-
 public:
-
     QJsonArray leerPreguntasJson();
 
     bool actualizarPreguntaJson(const QJsonObject &preguntaEditada);
 
     bool borrarPreguntaJson(const QString &idPregunta);
-
 };
 
 #endif // LECTORJSON_H
