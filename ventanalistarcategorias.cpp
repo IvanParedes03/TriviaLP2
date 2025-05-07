@@ -1,5 +1,7 @@
 #include "ventanalistarcategorias.h"
 #include "ui_ventanalistarcategorias.h"
+#include "lectorjson.h"
+#include <QJsonDocument>
 #include <QFile>
 #include <QDebug>
 #include <QMessageBox>
@@ -22,7 +24,6 @@ VentanaListarCategorias::~VentanaListarCategorias()
 
 void VentanaListarCategorias::showEvent(QShowEvent *event)
 {
-    qDebug() << "Se ejecuta el showEvent de la ventana editar categorias...";
     ui->listWidget_listaCategorias->clearSelection();
     if (ui->pushButton_borrarCategoriaSeleccionada != nullptr) {
         ui->pushButton_borrarCategoriaSeleccionada->setFocus();
@@ -32,8 +33,9 @@ void VentanaListarCategorias::showEvent(QShowEvent *event)
 
 bool VentanaListarCategorias::cargarListaCategorias()
 {
+    LectorJson lectorArchivo("preguntas.json", this);
 
-    QJsonArray preguntasJson = leerPreguntasJson();
+    QJsonArray preguntasJson = lectorArchivo.leerPreguntasJson();
 
     if(preguntasJson.isEmpty()){
         return false;

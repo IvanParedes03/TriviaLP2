@@ -160,6 +160,20 @@
      </layout>
     </item>
     <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Descripcion :</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit_descripcionCategoria"/>
+      </item>
+     </layout>
+    </item>
+    <item>
      <layout class="QHBoxLayout" name="horizontalLayout_3">
       <item>
        <widget class="QPushButton" name="pushButton_crearPregunta">
@@ -179,13 +193,6 @@
        <widget class="QPushButton" name="pushButton_listarCategorias">
         <property name="text">
          <string>Listar Categorias</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButton_crearPreguntasVolver">
-        <property name="text">
-         <string>Volver</string>
         </property>
        </widget>
       </item>

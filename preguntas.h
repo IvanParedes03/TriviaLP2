@@ -1,13 +1,12 @@
 #ifndef PREGUNTAS_H
 #define PREGUNTAS_H
 
-#include "lectorjson.h"
 #include <QMainWindow>
 #include <QString>
 #include <QUuid>
 #include <QListWidget>
 
-class preguntas: public LectorJson
+class preguntas
 {
 public:
 
@@ -45,6 +44,7 @@ private:
     QString opcionCorrecta;
     QString categoria;
     QString imagenBase64;
+
 };
 
 #endif // PREGUNTAS_H

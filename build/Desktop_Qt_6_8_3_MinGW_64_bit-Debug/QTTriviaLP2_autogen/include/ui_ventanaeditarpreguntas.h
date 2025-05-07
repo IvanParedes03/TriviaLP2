@@ -43,13 +43,12 @@ public:
     QLineEdit *lineEdit_categoriaEditar;
     QHBoxLayout *horizontalLayout_3;
     QPushButton *pushButton_editarPregunta;
-    QPushButton *pushButton_editarPreguntaVolver;
 
     void setupUi(QDialog *VentanaEditarPreguntas)
     {
         if (VentanaEditarPreguntas->objectName().isEmpty())
             VentanaEditarPreguntas->setObjectName("VentanaEditarPreguntas");
-        VentanaEditarPreguntas->resize(640, 480);
+        VentanaEditarPreguntas->resize(640, 505);
         verticalLayout = new QVBoxLayout(VentanaEditarPreguntas);
         verticalLayout->setObjectName("verticalLayout");
         label = new QLabel(VentanaEditarPreguntas);
@@ -149,11 +148,6 @@ public:
 
         horizontalLayout_3->addWidget(pushButton_editarPregunta);
 
-        pushButton_editarPreguntaVolver = new QPushButton(VentanaEditarPreguntas);
-        pushButton_editarPreguntaVolver->setObjectName("pushButton_editarPreguntaVolver");
-
-        horizontalLayout_3->addWidget(pushButton_editarPreguntaVolver);
-
 
         verticalLayout->addLayout(horizontalLayout_3);
 
@@ -176,7 +170,6 @@ public:
         label_9->setText(QCoreApplication::translate("VentanaEditarPreguntas", "Opcion Correcta:", nullptr));
         label_10->setText(QCoreApplication::translate("VentanaEditarPreguntas", "Categoria:", nullptr));
         pushButton_editarPregunta->setText(QCoreApplication::translate("VentanaEditarPreguntas", "Editar", nullptr));
-        pushButton_editarPreguntaVolver->setText(QCoreApplication::translate("VentanaEditarPreguntas", "Volver ", nullptr));
     } // retranslateUi
 
 };

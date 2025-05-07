@@ -40,6 +40,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         ventanalistarcategorias.h ventanalistarcategorias.cpp ventanalistarcategorias.ui
         lectorjson.h lectorjson.cpp
         ventanaeditarpreguntas.h ventanaeditarpreguntas.cpp ventanaeditarpreguntas.ui
+        recursos.qrc
 
 
 

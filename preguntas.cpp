@@ -1,4 +1,5 @@
 #include "preguntas.h"
+#include "lectorjson.h"
 #include <iostream>
 #include <QJsonObject>
 #include <QJsonArray>
@@ -62,7 +63,9 @@ void preguntas::guardarJSON(std::vector<preguntas>& pregunta){
 
 void preguntas::cargarJSON(std::vector<preguntas>& pregunta){
 
-    QJsonArray jsonPreguntas = leerPreguntasJson();
+    LectorJson lectorArchivo("preguntas.json");
+
+    QJsonArray jsonPreguntas = lectorArchivo.leerPreguntasJson();
 
     for (const auto& elem : jsonPreguntas) {
         if (!elem.isObject()) {

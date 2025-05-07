@@ -6,15 +6,18 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    QFile estilo("/styles.qss");
-    if(estilo.open(QFile::ReadOnly)){
-        QString style = QLatin1String(estilo.readAll());
+
+    QFile estilo(":/styles/css/styles.qss");
+
+    if (estilo.open(QFile::ReadOnly | QFile::Text)) {
+        QString style = estilo.readAll();
         a.setStyleSheet(style);
-        std::cout << "CARGADO" << std::endl;
+        estilo.close();
+        std::cout << "CSS CARGADO Y APLICADO A LA APLICACIÓN" << std::endl;
+    } else {
+        std::cout << "NO SE PUDO CARGAR EL CSS" << std::endl;
     }
-    else{
-        std::cout << "NO CARGADO" << std::endl;
-    }
+
     menuMain w;
     w.show();
     return a.exec();

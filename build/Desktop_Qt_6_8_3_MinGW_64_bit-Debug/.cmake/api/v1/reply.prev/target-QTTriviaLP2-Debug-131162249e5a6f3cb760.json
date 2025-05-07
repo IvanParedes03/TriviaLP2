@@ -75,13 +75,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 85,
+				"line" : 86,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 66,
+				"line" : 67,
 				"parent" : 0
 			},
 			{
@@ -374,7 +374,8 @@
 				22,
 				25,
 				28,
-				30
+				30,
+				42
 			]
 		}
 	],
@@ -507,7 +508,8 @@
 				22,
 				25,
 				28,
-				30
+				30,
+				42
 			]
 		},
 		{
@@ -525,14 +527,14 @@
 				24,
 				27,
 				29,
-				32,
 				33,
 				34,
 				35,
 				36,
 				37,
 				38,
-				39
+				39,
+				40
 			]
 		},
 		{
@@ -550,17 +552,25 @@
 			]
 		},
 		{
+			"name" : "Resources",
+			"sourceIndexes" : 
+			[
+				32
+			]
+		},
+		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				40
+				41
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				41
+				43,
+				44
 			]
 		}
 	],
@@ -741,6 +751,11 @@
 			"sourceGroupIndex" : 2
 		},
 		{
+			"backtrace" : 4,
+			"path" : "recursos.qrc",
+			"sourceGroupIndex" : 3
+		},
+		{
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/QTTriviaLP2_autogen/include/ui_ventanausuario.h",
@@ -792,13 +807,26 @@
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/QTTriviaLP2_autogen/timestamp",
-			"sourceGroupIndex" : 3
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 0,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/QTTriviaLP2_autogen/EWIEGA46WW/qrc_recursos.cpp",
+			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/QTTriviaLP2_autogen/timestamp.rule",
-			"sourceGroupIndex" : 4
+			"sourceGroupIndex" : 5
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/QTTriviaLP2_autogen/EWIEGA46WW/qrc_recursos.cpp.rule",
+			"sourceGroupIndex" : 5
 		}
 	],
 	"type" : "EXECUTABLE"

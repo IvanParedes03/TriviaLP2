@@ -7,7 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-b23ec60f96ec950aa2a7.json",
+					"jsonFile" : "directory-.-Debug-d514156c951f7c0e78ba.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.16"
@@ -44,7 +44,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "QTTriviaLP2::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-QTTriviaLP2-Debug-a2f8fa40319673058c76.json",
+					"jsonFile" : "target-QTTriviaLP2-Debug-3d6e9a6a8da4a7848ddc.json",
 					"name" : "QTTriviaLP2",
 					"projectIndex" : 0
 				},

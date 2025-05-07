@@ -2,10 +2,6 @@ C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-
   C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-rama_mati/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/QTTriviaLP2_autogen/moc_predefs.h \
   C:/Qt/6.8.3/mingw_64/include/QtCore/QDebug \
   C:/Qt/6.8.3/mingw_64/include/QtCore/QFile \
-  C:/Qt/6.8.3/mingw_64/include/QtCore/QJsonArray \
-  C:/Qt/6.8.3/mingw_64/include/QtCore/QJsonDocument \
-  C:/Qt/6.8.3/mingw_64/include/QtCore/QJsonObject \
-  C:/Qt/6.8.3/mingw_64/include/QtCore/QObject \
   C:/Qt/6.8.3/mingw_64/include/QtCore/QString \
   C:/Qt/6.8.3/mingw_64/include/QtCore/QUuid \
   C:/Qt/6.8.3/mingw_64/include/QtCore/q20functional.h \
@@ -29,9 +25,6 @@ C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-
   C:/Qt/6.8.3/mingw_64/include/QtCore/qbytearrayalgorithms.h \
   C:/Qt/6.8.3/mingw_64/include/QtCore/qbytearraylist.h \
   C:/Qt/6.8.3/mingw_64/include/QtCore/qbytearrayview.h \
-  C:/Qt/6.8.3/mingw_64/include/QtCore/qcalendar.h \
-  C:/Qt/6.8.3/mingw_64/include/QtCore/qcborcommon.h \
-  C:/Qt/6.8.3/mingw_64/include/QtCore/qcborvalue.h \
   C:/Qt/6.8.3/mingw_64/include/QtCore/qchar.h \
   C:/Qt/6.8.3/mingw_64/include/QtCore/qcompare.h \
   C:/Qt/6.8.3/mingw_64/include/QtCore/qcompare_impl.h \
@@ -45,7 +38,6 @@ C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-
   C:/Qt/6.8.3/mingw_64/include/QtCore/qcontiguouscache.h \
   C:/Qt/6.8.3/mingw_64/include/QtCore/qdarwinhelpers.h \
   C:/Qt/6.8.3/mingw_64/include/QtCore/qdatastream.h \
-  C:/Qt/6.8.3/mingw_64/include/QtCore/qdatetime.h \
   C:/Qt/6.8.3/mingw_64/include/QtCore/qdebug.h \
   C:/Qt/6.8.3/mingw_64/include/QtCore/qendian.h \
   C:/Qt/6.8.3/mingw_64/include/QtCore/qexceptionhandling.h \
@@ -66,10 +58,6 @@ C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-
   C:/Qt/6.8.3/mingw_64/include/QtCore/qitemselectionmodel.h \
   C:/Qt/6.8.3/mingw_64/include/QtCore/qiterable.h \
   C:/Qt/6.8.3/mingw_64/include/QtCore/qiterator.h \
-  C:/Qt/6.8.3/mingw_64/include/QtCore/qjsonarray.h \
-  C:/Qt/6.8.3/mingw_64/include/QtCore/qjsondocument.h \
-  C:/Qt/6.8.3/mingw_64/include/QtCore/qjsonobject.h \
-  C:/Qt/6.8.3/mingw_64/include/QtCore/qjsonvalue.h \
   C:/Qt/6.8.3/mingw_64/include/QtCore/qlatin1stringview.h \
   C:/Qt/6.8.3/mingw_64/include/QtCore/qline.h \
   C:/Qt/6.8.3/mingw_64/include/QtCore/qlist.h \
@@ -138,7 +126,6 @@ C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-
   C:/Qt/6.8.3/mingw_64/include/QtCore/qtversionchecks.h \
   C:/Qt/6.8.3/mingw_64/include/QtCore/qtypeinfo.h \
   C:/Qt/6.8.3/mingw_64/include/QtCore/qtypes.h \
-  C:/Qt/6.8.3/mingw_64/include/QtCore/qurl.h \
   C:/Qt/6.8.3/mingw_64/include/QtCore/qutf8stringview.h \
   C:/Qt/6.8.3/mingw_64/include/QtCore/quuid.h \
   C:/Qt/6.8.3/mingw_64/include/QtCore/qvariant.h \
@@ -431,6 +418,5 @@ C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wctype.h \
-  C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-rama_mati/lectorjson.h \
   C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-rama_mati/preguntas.h \
   C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-rama_mati/ventanacrearpreguntas.h

@@ -43,6 +43,4 @@ private:
 
 };
 
-
-
 #endif // VENTANACREARPREGUNTAS_H

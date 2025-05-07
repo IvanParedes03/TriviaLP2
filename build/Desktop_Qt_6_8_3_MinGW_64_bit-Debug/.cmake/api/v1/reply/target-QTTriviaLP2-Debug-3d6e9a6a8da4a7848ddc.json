@@ -75,13 +75,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 84,
+				"line" : 86,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 65,
+				"line" : 67,
 				"parent" : 0
 			},
 			{
@@ -373,7 +373,9 @@
 				19,
 				22,
 				25,
-				28
+				28,
+				30,
+				42
 			]
 		}
 	],
@@ -505,7 +507,9 @@
 				19,
 				22,
 				25,
-				28
+				28,
+				30,
+				42
 			]
 		},
 		{
@@ -523,12 +527,14 @@
 				24,
 				27,
 				29,
-				30,
-				31,
-				32,
 				33,
 				34,
-				35
+				35,
+				36,
+				37,
+				38,
+				39,
+				40
 			]
 		},
 		{
@@ -541,21 +547,30 @@
 				15,
 				20,
 				23,
-				26
+				26,
+				31
+			]
+		},
+		{
+			"name" : "Resources",
+			"sourceIndexes" : 
+			[
+				32
 			]
 		},
 		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				36
+				41
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				37
+				43,
+				44
 			]
 		}
 	],
@@ -678,6 +693,49 @@
 		},
 		{
 			"backtrace" : 4,
+			"path" : "ventanalistarpreguntas.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "ventanalistarpreguntas.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "ventanalistarpreguntas.ui",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "ventanalistarcategorias.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "ventanalistarcategorias.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "ventanalistarcategorias.ui",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lectorjson.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "lectorjson.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
 			"path" : "ventanaeditarpreguntas.h",
 			"sourceGroupIndex" : 1
 		},
@@ -694,30 +752,8 @@
 		},
 		{
 			"backtrace" : 4,
-			"path" : "ventanaeditarcategorias.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 4,
-			"compileGroupIndex" : 0,
-			"path" : "ventanaeditarcategorias.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 4,
-			"path" : "ventanaeditarcategorias.ui",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 4,
-			"path" : "lectorjson.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 4,
-			"compileGroupIndex" : 0,
-			"path" : "lectorjson.cpp",
-			"sourceGroupIndex" : 0
+			"path" : "recursos.qrc",
+			"sourceGroupIndex" : 3
 		},
 		{
 			"backtrace" : 0,
@@ -752,26 +788,45 @@
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/QTTriviaLP2_autogen/include/ui_ventanalistarpreguntas.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/QTTriviaLP2_autogen/include/ui_ventanalistarcategorias.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/QTTriviaLP2_autogen/include/ui_ventanaeditarpreguntas.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/QTTriviaLP2_autogen/include/ui_ventanaeditarcategorias.h",
-			"sourceGroupIndex" : 1
+			"path" : "build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/QTTriviaLP2_autogen/timestamp",
+			"sourceGroupIndex" : 4
 		},
 		{
 			"backtrace" : 0,
+			"compileGroupIndex" : 0,
 			"isGenerated" : true,
-			"path" : "build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/QTTriviaLP2_autogen/timestamp",
-			"sourceGroupIndex" : 3
+			"path" : "build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/QTTriviaLP2_autogen/EWIEGA46WW/qrc_recursos.cpp",
+			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/QTTriviaLP2_autogen/timestamp.rule",
-			"sourceGroupIndex" : 4
+			"sourceGroupIndex" : 5
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/QTTriviaLP2_autogen/EWIEGA46WW/qrc_recursos.cpp.rule",
+			"sourceGroupIndex" : 5
 		}
 	],
 	"type" : "EXECUTABLE"

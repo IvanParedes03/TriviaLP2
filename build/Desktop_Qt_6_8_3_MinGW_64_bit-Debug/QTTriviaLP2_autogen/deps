@@ -2,7 +2,6 @@ QTTriviaLP2_autogen/timestamp: \
 	C:/Qt/6.8.3/mingw_64/include/QtCore/QDebug \
 	C:/Qt/6.8.3/mingw_64/include/QtCore/QFile \
 	C:/Qt/6.8.3/mingw_64/include/QtCore/QJsonArray \
-	C:/Qt/6.8.3/mingw_64/include/QtCore/QJsonDocument \
 	C:/Qt/6.8.3/mingw_64/include/QtCore/QJsonObject \
 	C:/Qt/6.8.3/mingw_64/include/QtCore/QObject \
 	C:/Qt/6.8.3/mingw_64/include/QtCore/QString \
@@ -66,7 +65,6 @@ QTTriviaLP2_autogen/timestamp: \
 	C:/Qt/6.8.3/mingw_64/include/QtCore/qiterable.h \
 	C:/Qt/6.8.3/mingw_64/include/QtCore/qiterator.h \
 	C:/Qt/6.8.3/mingw_64/include/QtCore/qjsonarray.h \
-	C:/Qt/6.8.3/mingw_64/include/QtCore/qjsondocument.h \
 	C:/Qt/6.8.3/mingw_64/include/QtCore/qjsonobject.h \
 	C:/Qt/6.8.3/mingw_64/include/QtCore/qjsonvalue.h \
 	C:/Qt/6.8.3/mingw_64/include/QtCore/qlatin1stringview.h \
@@ -628,6 +626,7 @@ QTTriviaLP2_autogen/timestamp: \
 	C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-rama_mati/menumain.h \
 	C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-rama_mati/preguntas.cpp \
 	C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-rama_mati/preguntas.h \
+	C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-rama_mati/recursos.qrc \
 	C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-rama_mati/ventanacrearpreguntas.cpp \
 	C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-rama_mati/ventanacrearpreguntas.h \
 	C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-rama_mati/ventanaeditarpreguntas.cpp \

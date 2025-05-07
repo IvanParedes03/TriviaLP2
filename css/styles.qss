@@ -1,0 +1,116 @@
+QDialog {
+    background-color: #303030; /* Fondo oscuro principal */
+    color: #E0E0E0; /* Texto claro principal */
+    border: 2px solid #9575CD; /* Borde lila oscuro */
+    border-radius: 10px;
+}
+
+QLabel {
+    color: #E0E0E0; /* Texto claro */
+    font-family: 'Segoe UI', sans-serif;
+}
+
+QLineEdit {
+    background-color: #424242; /* Fondo oscuro para entrada de texto */
+    color: #E0E0E0; /* Texto claro para entrada de texto */
+    border: 2px solid #BA68C8; /* Borde lila */
+    border-radius: 5px;
+    selection-background-color: #9575CD; /* Color de selección lila oscuro */
+    selection-color: #E0E0E0;
+}
+
+QLineEdit:focus {
+    border-color: #F06292; /* Borde rosa al enfocar */
+}
+
+QPushButton {
+    background-color: #BA68C8; /* Fondo lila */
+    color: #212121; /* Texto oscuro */
+    border: 2px solid #BA68C8;
+    border-radius: 5px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+QPushButton:pressed {
+    background-color: #8C9EFF; /* Fondo azul claro al presionar */
+    border-color: #8C9EFF;
+    color: #212121;
+}
+
+QPushButton:enabled {
+    background-color: #8C9EFF; /* Fondo azul claro cuando está habilitado */
+    color: #212121;
+    border-color: #8C9EFF;
+}
+
+QGroupBox {
+    border: 2px solid #9575CD; /* Borde lila oscuro */
+    background-color: #424242; /* Fondo oscuro para el grupo */
+    border-radius: 10px;
+    color: #E0E0E0; /* Color del texto dentro del grupo */
+}
+
+QGroupBox::title {
+    color: #BA68C8; /* Color del título lila */
+    font-family: 'Verdana', sans-serif;
+    font-weight: bold;
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    padding: 0 5px;
+    background-color: #424242; /* Fondo del título igual al grupo */
+    border: 1px solid #9575CD; /* Borde del título */
+    border-radius: 5px;
+}
+
+QListWidget {
+    background-color: #424242; /* Fondo oscuro para la lista */
+    color: #E0E0E0; /* Texto claro para la lista */
+    border: 1px solid #9575CD; /* Borde lila oscuro */
+    border-radius: 5px;
+    selection-background-color: #BA68C8; /* Fondo de selección lila */
+    selection-color: #212121; /* Color del texto seleccionado oscuro */
+}
+
+QScrollBar:vertical {
+    background: #424242;
+    width: 10px;
+    margin: 0px 0px 0px 0px;
+}
+
+QScrollBar::handle:vertical {
+    background: #9575CD;
+    min-height: 20px;
+    border-radius: 5px;
+}
+
+QScrollBar::add-line:vertical {
+    border: none;
+    background: none;
+}
+
+QScrollBar::sub-line:vertical {
+    border: none;
+    background: none;
+}
+
+QScrollBar:horizontal {
+    background: #424242;
+    height: 10px;
+    margin: 0px 0px 0px 0px;
+}
+
+QScrollBar::handle:horizontal {
+    background: #9575CD;
+    min-width: 20px;
+    border-radius: 5px;
+}
+
+QScrollBar::add-line:horizontal {
+    border: none;
+    background: none;
+}
+
+QScrollBar::sub-line:horizontal {
+    border: none;
+    background: none;
+}

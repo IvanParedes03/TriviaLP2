@@ -2,6 +2,7 @@
 #include "./ui_ventanalistarpreguntas.h"
 #include "ventanaeditarpreguntas.h"
 #include "preguntas.h"
+#include "lectorjson.h"
 #include <QDebug>
 #include <QJsonObject>
 #include <QJsonDocument>
@@ -30,7 +31,6 @@ VentanaListarPreguntas::~VentanaListarPreguntas()
 
 void VentanaListarPreguntas::showEvent(QShowEvent *event)
 {
-    qDebug() << "Se ejecuta el showEvent de la ventana editar preguntas...";
     ui->listWidget_listaPreguntas->clearSelection();
     if (ui->pushButton_editarPreguntaSeleccionada != nullptr) {
         ui->pushButton_editarPreguntaSeleccionada->setFocus();
@@ -38,37 +38,31 @@ void VentanaListarPreguntas::showEvent(QShowEvent *event)
     QWidget::showEvent(event);
 }
 
-bool VentanaListarPreguntas:: cargarListaPreguntas()
+bool VentanaListarPreguntas::cargarListaPreguntas()
 {
-
-    QJsonArray preguntasJson = preguntas::leerPreguntasJson();
+    LectorJson lectorArchivo("preguntas.json");
+    QJsonArray preguntasJson = lectorArchivo.leerPreguntasJson();
 
     if (preguntasJson.isEmpty()) {
+        ui->listWidget_listaPreguntas->clear();
         return false;
     }
 
+    ui->listWidget_listaPreguntas->clear();
 
     for (const auto& preguntaObjeto : preguntasJson) {
         if (preguntaObjeto.isObject()) {
-
             QJsonObject preguntaJson = preguntaObjeto.toObject();
-
             QString preguntaTexto = preguntaJson.value("pregunta").toString();
             QString categoria = preguntaJson.value("categoria").toString();
             QString id = preguntaJson.value("id").toString();
-
             QString itemTexto = QString("Pregunta: %1 \nCategoría: %2 \nID: %3").arg(preguntaTexto, categoria, id);
-
             QListWidgetItem *item = new QListWidgetItem(itemTexto);
-
             item->setData(Qt::UserRole, id);
-
             ui->listWidget_listaPreguntas->addItem(item);
         }
     }
-
     return true;
-
 }
 
 void VentanaListarPreguntas::elementoSeleccionadoPregunta(QListWidgetItem *elemActual, QListWidgetItem *elemAnterior)
@@ -77,13 +71,25 @@ void VentanaListarPreguntas::elementoSeleccionadoPregunta(QListWidgetItem *elemA
         VentanaListarPreguntas::idPreguntaSeleccionada = elemActual->data(Qt::UserRole).toString();
         ui->pushButton_editarPreguntaSeleccionada->setEnabled(true);
         ui->pushButton_borrarPreguntaSeleccionada->setEnabled(true);
-    }else{
+
+
+        LectorJson lectorArchivos("preguntas.json");
+        QJsonArray preguntasJson = lectorArchivos.leerPreguntasJson();
+        for (const auto& preguntaObjeto : preguntasJson) {
+            if (preguntaObjeto.isObject()) {
+                QJsonObject pregunta = preguntaObjeto.toObject();
+                if (pregunta.value("id").toString() == idPreguntaSeleccionada) {
+                    preguntaSeleccionada = pregunta;
+                }
+            }
+        }
+        preguntaSeleccionada = QJsonObject();
+    } else {
         idPreguntaSeleccionada.clear();
         preguntaSeleccionada = QJsonObject();
         ui->pushButton_editarPreguntaSeleccionada->setEnabled(false);
         ui->pushButton_borrarPreguntaSeleccionada->setEnabled(false);
     }
-
 }
 
 QJsonObject VentanaListarPreguntas::obtenerElementoPregunta()
@@ -93,7 +99,8 @@ QJsonObject VentanaListarPreguntas::obtenerElementoPregunta()
         return QJsonObject();
     }
 
-    QJsonArray preguntasJson = leerPreguntasJson();
+    LectorJson lectorArchivos("preguntas.json");
+    QJsonArray preguntasJson = lectorArchivos.leerPreguntasJson();
 
     for (const auto& preguntaObjeto : preguntasJson) {
         if (preguntaObjeto.isObject()) {
@@ -108,7 +115,6 @@ QJsonObject VentanaListarPreguntas::obtenerElementoPregunta()
     return QJsonObject();
 }
 
-
 void VentanaListarPreguntas::on_pushButton_editarPreguntaSeleccionada_clicked()
 {
     QJsonObject preguntaParaEditar = obtenerElementoPregunta();
@@ -117,8 +123,11 @@ void VentanaListarPreguntas::on_pushButton_editarPreguntaSeleccionada_clicked()
 
         VentanaEditarPreguntas *ventanaEditarPreguntas = new VentanaEditarPreguntas(preguntaParaEditar, this);
         connect(ventanaEditarPreguntas, &VentanaEditarPreguntas::preguntaEditadaGuardada, this, &VentanaListarPreguntas::cargarListaPreguntas);
+        connect(ventanaEditarPreguntas, &VentanaEditarPreguntas::destroyed, this, [this](){
+            this->show();
+        });
         ventanaEditarPreguntas->show();
-        this->hide(); // Considera si realmente quieres ocultar esta ventana
+        this->hide();
 
     } else {
 
@@ -127,13 +136,13 @@ void VentanaListarPreguntas::on_pushButton_editarPreguntaSeleccionada_clicked()
     }
 }
 
-
 void VentanaListarPreguntas::on_pushButton_borrarPreguntaSeleccionada_clicked()
 {
+    LectorJson lectorArchivos("preguntas.json");
 
     if (!idPreguntaSeleccionada.isEmpty()) {
 
-        borrarPreguntaJson(idPreguntaSeleccionada);
+        lectorArchivos.borrarPreguntaJson(idPreguntaSeleccionada);
         ui->listWidget_listaPreguntas->clear();
 
     } else{
@@ -142,4 +151,3 @@ void VentanaListarPreguntas::on_pushButton_borrarPreguntaSeleccionada_clicked()
 
     }
 }
-

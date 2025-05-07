@@ -43,11 +43,13 @@ public:
     QHBoxLayout *horizontalLayout_2;
     QLabel *label_9;
     QLineEdit *lineEdit_categoria;
+    QHBoxLayout *horizontalLayout_4;
+    QLabel *label;
+    QLineEdit *lineEdit_descripcionCategoria;
     QHBoxLayout *horizontalLayout_3;
     QPushButton *pushButton_crearPregunta;
     QPushButton *pushButton_listarPreguntas;
     QPushButton *pushButton_listarCategorias;
-    QPushButton *pushButton_crearPreguntasVolver;
 
     void setupUi(QMainWindow *VentanaCrearPreguntas)
     {
@@ -158,6 +160,21 @@ public:
 
         verticalLayout->addLayout(horizontalLayout_2);
 
+        horizontalLayout_4 = new QHBoxLayout();
+        horizontalLayout_4->setObjectName("horizontalLayout_4");
+        label = new QLabel(centralwidget);
+        label->setObjectName("label");
+
+        horizontalLayout_4->addWidget(label);
+
+        lineEdit_descripcionCategoria = new QLineEdit(centralwidget);
+        lineEdit_descripcionCategoria->setObjectName("lineEdit_descripcionCategoria");
+
+        horizontalLayout_4->addWidget(lineEdit_descripcionCategoria);
+
+
+        verticalLayout->addLayout(horizontalLayout_4);
+
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setObjectName("horizontalLayout_3");
         pushButton_crearPregunta = new QPushButton(centralwidget);
@@ -174,11 +191,6 @@ public:
         pushButton_listarCategorias->setObjectName("pushButton_listarCategorias");
 
         horizontalLayout_3->addWidget(pushButton_listarCategorias);
-
-        pushButton_crearPreguntasVolver = new QPushButton(centralwidget);
-        pushButton_crearPreguntasVolver->setObjectName("pushButton_crearPreguntasVolver");
-
-        horizontalLayout_3->addWidget(pushButton_crearPreguntasVolver);
 
 
         verticalLayout->addLayout(horizontalLayout_3);
@@ -202,10 +214,10 @@ public:
         label_7->setText(QCoreApplication::translate("VentanaCrearPreguntas", "Opcion C:", nullptr));
         label_8->setText(QCoreApplication::translate("VentanaCrearPreguntas", "Opcion Correcta:", nullptr));
         label_9->setText(QCoreApplication::translate("VentanaCrearPreguntas", "Categoria:", nullptr));
+        label->setText(QCoreApplication::translate("VentanaCrearPreguntas", "Descripcion :", nullptr));
         pushButton_crearPregunta->setText(QCoreApplication::translate("VentanaCrearPreguntas", "Crear ", nullptr));
         pushButton_listarPreguntas->setText(QCoreApplication::translate("VentanaCrearPreguntas", "Listar Preguntas", nullptr));
         pushButton_listarCategorias->setText(QCoreApplication::translate("VentanaCrearPreguntas", "Listar Categorias", nullptr));
-        pushButton_crearPreguntasVolver->setText(QCoreApplication::translate("VentanaCrearPreguntas", "Volver", nullptr));
     } // retranslateUi
 
 };
