@@ -26,19 +26,33 @@
    <string>Form</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>10</number>
+   </property>
+   <property name="leftMargin">
+    <number>10</number>
+   </property>
+   <property name="topMargin">
+    <number>10</number>
+   </property>
+   <property name="rightMargin">
+    <number>10</number>
+   </property>
+   <property name="bottomMargin">
+    <number>10</number>
+   </property>
    <item>
     <widget class="QListWidget" name="listWidget_listaCategorias">
      <property name="minimumSize">
       <size>
-       <width>600</width>
-       <height>450</height>
+       <width>400</width>
+       <height>350</height>
       </size>
      </property>
-     <property name="maximumSize">
-      <size>
-       <width>690</width>
-       <height>450</height>
-      </size>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
      </property>
     </widget>
    </item>
@@ -46,8 +60,13 @@
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
       <widget class="QPushButton" name="pushButton_borrarCategoriaSeleccionada">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="text">
-        <string>Borrar Categoria</string>
+        <string>Borrar Categoría</string>
        </property>
       </widget>
      </item>

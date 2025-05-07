@@ -6,6 +6,7 @@
 #include <vector>
 #include <iostream>
 #include <QFile>
+#include <QPixmap> // Asegúrate de incluir QPixmap
 
 VentanaJuego::VentanaJuego(QWidget *parent,
                            std::vector<QJsonObject> &preguntas,
@@ -20,7 +21,6 @@ VentanaJuego::VentanaJuego(QWidget *parent,
 {
     setAttribute(Qt::WA_DeleteOnClose, true);
     ui->setupUi(this);
-
 
     std::random_device rd;
     std::mt19937 gen(rd());
@@ -42,13 +42,8 @@ VentanaJuego::VentanaJuego(QWidget *parent,
     if (jugador2.getAlias() != "") ui->aliasP2->setText(QString::fromStdString(jugador2.getAlias())),
             ui->puntajeP2->setText(QString::number(jugador2.getPuntuacionJuego()));
 
-
     ui->labelCategoria->setText(preguntas[0]["categoria"].toString());
-
     ui->labelPregunta->setText(preguntas[preguntaActual]["pregunta"].toString());
-
-
-
 
     QString base64FileName = preguntas[preguntaActual]["imagenBase64File"].toString();
     QString base64FilePath = "base64_images/" + base64FileName;
@@ -58,28 +53,28 @@ VentanaJuego::VentanaJuego(QWidget *parent,
     QFile file(base64FilePath);
     if (!file.exists()) {
         qDebug() << "Archivo no existe!";
-    }
-
-    if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        ui->label_imagen->clear(); // Limpiar el QLabel si no hay imagen
+        ui->label_imagen->setText("Imagen no encontrada."); // Mostrar un mensaje
+    } else if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
         QByteArray base64Data = file.readAll();
         QByteArray imageData = QByteArray::fromBase64(base64Data);
 
         QPixmap pixmap;
-        if (!pixmap.loadFromData(imageData)) {
-            qDebug() << "No se pudo cargar imagen desde datos base64";
-        } else {
+        if (pixmap.loadFromData(imageData)) {
+            // Escalar la imagen después de cargarla, manteniendo la relación de aspecto
             ui->label_imagen->setPixmap(pixmap.scaled(ui->label_imagen->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
-            qDebug() << "Imagen cargada correctamente.";
+            qDebug() << "Imagen cargada y escalada correctamente.";
+        } else {
+            qDebug() << "No se pudo cargar imagen desde datos base64.";
+            ui->label_imagen->clear(); // Limpiar el QLabel si la carga falla
+            ui->label_imagen->setText("Error al cargar la imagen."); // Mostrar un mensaje
         }
-
         file.close();
     } else {
-        qDebug() << "No se pudo abrir el archivo base64";
+        qDebug() << "No se pudo abrir el archivo base64.";
+        ui->label_imagen->clear(); // Limpiar el QLabel si no se puede abrir el archivo
+        ui->label_imagen->setText("Error al abrir el archivo de imagen."); // Mostrar un mensaje
     }
-
-
-
-
 
     ui->opcionA->setText(preguntas[preguntaActual]["opcionA"].toString());
     ui->opcionB->setText(preguntas[preguntaActual]["opcionB"].toString());
@@ -87,22 +82,13 @@ VentanaJuego::VentanaJuego(QWidget *parent,
 
     ui->nroPregunta->setText("1/" + QString::number(preguntas.size()));
 
-    ui->formLayout->setStyleSheet(
-        "#formLayout {"
-        "    border: 2px solid #6c63ff;"
-        "    border-radius: 10px;"
-        "}"
-        );
     preguntas.erase(preguntas.begin() + preguntaActual);
 
     connect(ui->opcionA, &QPushButton::clicked, this, &VentanaJuego::botonIntento);
     connect(ui->opcionB, &QPushButton::clicked, this, &VentanaJuego::botonIntento);
     connect(ui->opcionC, &QPushButton::clicked, this, &VentanaJuego::botonIntento);
 
-
-
     std::cout << jugador1.getPuntuacionHistorica() << std::endl;
-
 }
 
 VentanaJuego::~VentanaJuego()
@@ -111,12 +97,11 @@ VentanaJuego::~VentanaJuego()
 }
 
 void VentanaJuego::refreshGame(std::vector<QJsonObject> &preguntas, Usuario &jugador1, Usuario &jugador2){
-
     std::random_device rd;
     std::mt19937 gen(rd());
     std::uniform_int_distribution<> dist0_preguntasSize(0, preguntas.size() - 1);
 
-    ui->label_imagen->clear();
+    ui->label_imagen->clear(); // Limpiar la imagen anterior
 
     preguntaActual = dist0_preguntasSize(gen);
     ui->labelPregunta->setText(preguntas[preguntaActual]["pregunta"].toString());
@@ -128,7 +113,6 @@ void VentanaJuego::refreshGame(std::vector<QJsonObject> &preguntas, Usuario &jug
     nroActual++;
     ui->nroPregunta->setText(QString::number(nroActual) + "/" + ui->nroPregunta->text()[2]);
 
-
     QString base64FileName = preguntas[preguntaActual].value("imagenBase64File").toString();
     QString base64FilePath = "base64_images/" + base64FileName;
 
@@ -137,28 +121,26 @@ void VentanaJuego::refreshGame(std::vector<QJsonObject> &preguntas, Usuario &jug
     QFile file(base64FilePath);
 
     if (!file.exists()) {
-
         qDebug() << "Archivo no existe!";
-    }
-
-    if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-
+        ui->label_imagen->setText("Imagen no encontrada.");
+    } else if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
         QByteArray base64Data = file.readAll();
         QByteArray imageData = QByteArray::fromBase64(base64Data);
 
         QPixmap pixmap;
-        if (!pixmap.loadFromData(imageData)) {
-            qDebug() << "No se pudo cargar imagen desde datos base64";
-        } else {
+        if (pixmap.loadFromData(imageData)) {
+            // Escalar la imagen después de cargarla, manteniendo la relación de aspecto
             ui->label_imagen->setPixmap(pixmap.scaled(ui->label_imagen->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
-            qDebug() << "Imagen cargada correctamente.";
+            qDebug() << "Imagen cargada y escalada correctamente.";
+        } else {
+            qDebug() << "No se pudo cargar imagen desde datos base64.";
+            ui->label_imagen->setText("Error al cargar la imagen.");
         }
-
         file.close();
     } else {
-        qDebug() << "No se pudo abrir el archivo base64";
+        qDebug() << "No se pudo abrir el archivo base64.";
+        ui->label_imagen->setText("Error al abrir el archivo de imagen.");
     }
-
 
     if (jugador2.getAlias() != ""){
         ui->turno->setText(
@@ -170,20 +152,16 @@ void VentanaJuego::refreshGame(std::vector<QJsonObject> &preguntas, Usuario &jug
 }
 
 void VentanaJuego::botonIntento(){
-
     QPushButton *boton = qobject_cast<QPushButton*>(sender());
-
 
     if (!boton) return;
     bool correcto = false;
     if(boton == ui->opcionA && preguntas[preguntaActual]["opcionCorrecta"] == "a"){
         correcto = true;
     }
-
     else if(boton == ui->opcionB && preguntas[preguntaActual]["opcionCorrecta"] == "b"){
         correcto = true;
     }
-
     else if(boton == ui->opcionC && preguntas[preguntaActual]["opcionCorrecta"] == "c"){
         correcto = true;
     }
@@ -215,10 +193,8 @@ void VentanaJuego::botonIntento(){
             if(jugador2.getAlias() == i.getAlias() && jugador2.getAlias() != "") i.setPuntuacionHistorica(jugador2.getPuntuacionHistorica());
         }
         Usuario::guardarJSON(usuarios);
-
         return;
     }
 
     VentanaJuego::refreshGame(preguntas, jugador1, jugador2);
-
 }

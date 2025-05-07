@@ -130,7 +130,6 @@ void VentanaCrearPreguntas::on_pushButton_crearPregunta_clicked()
         ui->lineEdit_opcionC->clear();
         ui->lineEdit_respuestaCorrecta->clear();
         ui->lineEdit_categoria->clear();
-        ui->lineEdit_descripcionCategoria->clear();
         ui->label_imagen->clear();
         ui->label_imagen->setProperty("imagenBase64Archivo", QString());
     } else {

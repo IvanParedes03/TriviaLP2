@@ -12,208 +12,217 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
-#include <QtWidgets/QFormLayout>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QVBoxLayout>
-#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_VentanaJuego
 {
 public:
-    QVBoxLayout *verticalLayout_5;
-    QHBoxLayout *horizontalLayout_2;
     QVBoxLayout *verticalLayout_4;
+    QVBoxLayout *layoutPreguntaImagen;
     QLabel *labelPregunta;
     QLabel *label_imagen;
-    QHBoxLayout *horizontalLayout;
-    QLabel *label_5;
-    QLabel *labelCategoria;
-    QHBoxLayout *horizontalLayout_4;
     QVBoxLayout *verticalLayout;
     QPushButton *opcionA;
     QPushButton *opcionB;
     QPushButton *opcionC;
-    QWidget *formLayout;
-    QWidget *formLayoutWidget_2;
-    QFormLayout *formInfo;
+    QHBoxLayout *horizontalLayout_6;
+    QVBoxLayout *verticalLayout_2;
+    QHBoxLayout *horizontalLayout_2;
     QLabel *label;
     QLabel *nroPregunta;
+    QHBoxLayout *horizontalLayout_3;
     QLabel *label_3;
     QLabel *turno;
-    QHBoxLayout *horizontalLayout_3;
-    QVBoxLayout *verticalLayout_2;
-    QLabel *aliasP1;
-    QLabel *puntajeP1;
+    QHBoxLayout *horizontalLayout;
+    QLabel *label_5;
+    QLabel *labelCategoria;
     QVBoxLayout *verticalLayout_3;
+    QHBoxLayout *horizontalLayout_4;
+    QLabel *aliasP1;
     QLabel *aliasP2;
+    QHBoxLayout *horizontalLayout_5;
+    QLabel *puntajeP1;
     QLabel *puntajeP2;
 
     void setupUi(QDialog *VentanaJuego)
     {
         if (VentanaJuego->objectName().isEmpty())
             VentanaJuego->setObjectName("VentanaJuego");
-        VentanaJuego->resize(800, 600);
-        VentanaJuego->setMinimumSize(QSize(600, 600));
-        VentanaJuego->setMaximumSize(QSize(800, 600));
-        verticalLayout_5 = new QVBoxLayout(VentanaJuego);
-        verticalLayout_5->setObjectName("verticalLayout_5");
-        horizontalLayout_2 = new QHBoxLayout();
-        horizontalLayout_2->setObjectName("horizontalLayout_2");
-        verticalLayout_4 = new QVBoxLayout();
+        VentanaJuego->resize(700, 500);
+        VentanaJuego->setMinimumSize(QSize(700, 500));
+        VentanaJuego->setMaximumSize(QSize(700, 500));
+        verticalLayout_4 = new QVBoxLayout(VentanaJuego);
         verticalLayout_4->setObjectName("verticalLayout_4");
+        layoutPreguntaImagen = new QVBoxLayout();
+        layoutPreguntaImagen->setObjectName("layoutPreguntaImagen");
+        layoutPreguntaImagen->setContentsMargins(0, -1, -1, -1);
         labelPregunta = new QLabel(VentanaJuego);
         labelPregunta->setObjectName("labelPregunta");
+        labelPregunta->setMaximumSize(QSize(16777215, 70));
         QFont font;
         font.setPointSize(15);
         labelPregunta->setFont(font);
+        labelPregunta->setScaledContents(true);
         labelPregunta->setAlignment(Qt::AlignmentFlag::AlignCenter);
+        labelPregunta->setWordWrap(true);
 
-        verticalLayout_4->addWidget(labelPregunta);
+        layoutPreguntaImagen->addWidget(labelPregunta);
 
         label_imagen = new QLabel(VentanaJuego);
         label_imagen->setObjectName("label_imagen");
-        label_imagen->setMinimumSize(QSize(300, 200));
-        label_imagen->setMaximumSize(QSize(300, 200));
-        label_imagen->setScaledContents(false);
+        label_imagen->setMaximumSize(QSize(16777215, 300));
+        label_imagen->setLayoutDirection(Qt::LayoutDirection::LeftToRight);
+        label_imagen->setAlignment(Qt::AlignmentFlag::AlignCenter);
+        label_imagen->setScaledContents(true);
 
-        verticalLayout_4->addWidget(label_imagen);
-
-
-        horizontalLayout_2->addLayout(verticalLayout_4);
-
-        horizontalLayout = new QHBoxLayout();
-        horizontalLayout->setObjectName("horizontalLayout");
-        label_5 = new QLabel(VentanaJuego);
-        label_5->setObjectName("label_5");
-        QFont font1;
-        font1.setPointSize(20);
-        label_5->setFont(font1);
-
-        horizontalLayout->addWidget(label_5);
-
-        labelCategoria = new QLabel(VentanaJuego);
-        labelCategoria->setObjectName("labelCategoria");
-        labelCategoria->setFont(font1);
-
-        horizontalLayout->addWidget(labelCategoria);
+        layoutPreguntaImagen->addWidget(label_imagen);
 
 
-        horizontalLayout_2->addLayout(horizontalLayout);
+        verticalLayout_4->addLayout(layoutPreguntaImagen);
 
-
-        verticalLayout_5->addLayout(horizontalLayout_2);
-
-        horizontalLayout_4 = new QHBoxLayout();
-        horizontalLayout_4->setObjectName("horizontalLayout_4");
         verticalLayout = new QVBoxLayout();
         verticalLayout->setObjectName("verticalLayout");
-        verticalLayout->setContentsMargins(25, -1, 25, -1);
         opcionA = new QPushButton(VentanaJuego);
         opcionA->setObjectName("opcionA");
+        QFont font1;
+        font1.setPointSize(10);
+        opcionA->setFont(font1);
 
         verticalLayout->addWidget(opcionA);
 
         opcionB = new QPushButton(VentanaJuego);
         opcionB->setObjectName("opcionB");
+        opcionB->setFont(font1);
 
         verticalLayout->addWidget(opcionB);
 
         opcionC = new QPushButton(VentanaJuego);
         opcionC->setObjectName("opcionC");
+        opcionC->setFont(font1);
 
         verticalLayout->addWidget(opcionC);
 
 
-        horizontalLayout_4->addLayout(verticalLayout);
+        verticalLayout_4->addLayout(verticalLayout);
 
-        formLayout = new QWidget(VentanaJuego);
-        formLayout->setObjectName("formLayout");
-        formLayoutWidget_2 = new QWidget(formLayout);
-        formLayoutWidget_2->setObjectName("formLayoutWidget_2");
-        formLayoutWidget_2->setGeometry(QRect(0, 0, 281, 166));
-        formInfo = new QFormLayout(formLayoutWidget_2);
-        formInfo->setObjectName("formInfo");
-        formInfo->setHorizontalSpacing(35);
-        formInfo->setVerticalSpacing(50);
-        formInfo->setContentsMargins(15, 25, 0, 25);
-        label = new QLabel(formLayoutWidget_2);
+        horizontalLayout_6 = new QHBoxLayout();
+        horizontalLayout_6->setObjectName("horizontalLayout_6");
+        verticalLayout_2 = new QVBoxLayout();
+        verticalLayout_2->setObjectName("verticalLayout_2");
+        horizontalLayout_2 = new QHBoxLayout();
+        horizontalLayout_2->setObjectName("horizontalLayout_2");
+        label = new QLabel(VentanaJuego);
         label->setObjectName("label");
+        label->setMaximumSize(QSize(200, 100));
         label->setFont(font);
 
-        formInfo->setWidget(0, QFormLayout::LabelRole, label);
+        horizontalLayout_2->addWidget(label);
 
-        nroPregunta = new QLabel(formLayoutWidget_2);
+        nroPregunta = new QLabel(VentanaJuego);
         nroPregunta->setObjectName("nroPregunta");
         nroPregunta->setFont(font);
 
-        formInfo->setWidget(0, QFormLayout::FieldRole, nroPregunta);
-
-        label_3 = new QLabel(formLayoutWidget_2);
-        label_3->setObjectName("label_3");
-        label_3->setFont(font);
-
-        formInfo->setWidget(1, QFormLayout::LabelRole, label_3);
-
-        turno = new QLabel(formLayoutWidget_2);
-        turno->setObjectName("turno");
-        turno->setFont(font);
-
-        formInfo->setWidget(1, QFormLayout::FieldRole, turno);
+        horizontalLayout_2->addWidget(nroPregunta);
 
 
-        horizontalLayout_4->addWidget(formLayout);
-
-
-        verticalLayout_5->addLayout(horizontalLayout_4);
+        verticalLayout_2->addLayout(horizontalLayout_2);
 
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setObjectName("horizontalLayout_3");
-        verticalLayout_2 = new QVBoxLayout();
-        verticalLayout_2->setObjectName("verticalLayout_2");
-        verticalLayout_2->setContentsMargins(0, 0, -1, 15);
+        label_3 = new QLabel(VentanaJuego);
+        label_3->setObjectName("label_3");
+        label_3->setMaximumSize(QSize(90, 100));
+        label_3->setFont(font);
+
+        horizontalLayout_3->addWidget(label_3);
+
+        turno = new QLabel(VentanaJuego);
+        turno->setObjectName("turno");
+        turno->setFont(font);
+
+        horizontalLayout_3->addWidget(turno);
+
+
+        verticalLayout_2->addLayout(horizontalLayout_3);
+
+
+        horizontalLayout_6->addLayout(verticalLayout_2);
+
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName("horizontalLayout");
+        label_5 = new QLabel(VentanaJuego);
+        label_5->setObjectName("label_5");
+        label_5->setMaximumSize(QSize(100, 20));
+        QFont font2;
+        font2.setPointSize(9);
+        label_5->setFont(font2);
+        label_5->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        horizontalLayout->addWidget(label_5);
+
+        labelCategoria = new QLabel(VentanaJuego);
+        labelCategoria->setObjectName("labelCategoria");
+        labelCategoria->setMaximumSize(QSize(300, 200));
+        labelCategoria->setFont(font2);
+        labelCategoria->setScaledContents(true);
+        labelCategoria->setAlignment(Qt::AlignmentFlag::AlignCenter);
+        labelCategoria->setWordWrap(true);
+
+        horizontalLayout->addWidget(labelCategoria);
+
+
+        horizontalLayout_6->addLayout(horizontalLayout);
+
+        verticalLayout_3 = new QVBoxLayout();
+        verticalLayout_3->setObjectName("verticalLayout_3");
+        horizontalLayout_4 = new QHBoxLayout();
+        horizontalLayout_4->setObjectName("horizontalLayout_4");
         aliasP1 = new QLabel(VentanaJuego);
         aliasP1->setObjectName("aliasP1");
         aliasP1->setFont(font);
         aliasP1->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
-        verticalLayout_2->addWidget(aliasP1);
+        horizontalLayout_4->addWidget(aliasP1);
 
-        puntajeP1 = new QLabel(VentanaJuego);
-        puntajeP1->setObjectName("puntajeP1");
-        puntajeP1->setFont(font);
-        puntajeP1->setAlignment(Qt::AlignmentFlag::AlignCenter);
-
-        verticalLayout_2->addWidget(puntajeP1);
-
-
-        horizontalLayout_3->addLayout(verticalLayout_2);
-
-        verticalLayout_3 = new QVBoxLayout();
-        verticalLayout_3->setObjectName("verticalLayout_3");
-        verticalLayout_3->setContentsMargins(0, -1, 0, 15);
         aliasP2 = new QLabel(VentanaJuego);
         aliasP2->setObjectName("aliasP2");
         aliasP2->setFont(font);
         aliasP2->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
-        verticalLayout_3->addWidget(aliasP2);
+        horizontalLayout_4->addWidget(aliasP2);
+
+
+        verticalLayout_3->addLayout(horizontalLayout_4);
+
+        horizontalLayout_5 = new QHBoxLayout();
+        horizontalLayout_5->setObjectName("horizontalLayout_5");
+        puntajeP1 = new QLabel(VentanaJuego);
+        puntajeP1->setObjectName("puntajeP1");
+        puntajeP1->setFont(font);
+        puntajeP1->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        horizontalLayout_5->addWidget(puntajeP1);
 
         puntajeP2 = new QLabel(VentanaJuego);
         puntajeP2->setObjectName("puntajeP2");
         puntajeP2->setFont(font);
         puntajeP2->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
-        verticalLayout_3->addWidget(puntajeP2);
+        horizontalLayout_5->addWidget(puntajeP2);
 
 
-        horizontalLayout_3->addLayout(verticalLayout_3);
+        verticalLayout_3->addLayout(horizontalLayout_5);
 
 
-        verticalLayout_5->addLayout(horizontalLayout_3);
+        horizontalLayout_6->addLayout(verticalLayout_3);
+
+
+        verticalLayout_4->addLayout(horizontalLayout_6);
 
 
         retranslateUi(VentanaJuego);
@@ -226,18 +235,18 @@ public:
         VentanaJuego->setWindowTitle(QCoreApplication::translate("VentanaJuego", "Dialog", nullptr));
         labelPregunta->setText(QString());
         label_imagen->setText(QString());
-        label_5->setText(QCoreApplication::translate("VentanaJuego", "Categoria:", nullptr));
-        labelCategoria->setText(QString());
         opcionA->setText(QString());
         opcionB->setText(QString());
         opcionC->setText(QString());
-        label->setText(QCoreApplication::translate("VentanaJuego", "Pregunta Nro", nullptr));
+        label->setText(QCoreApplication::translate("VentanaJuego", "Pregunta Nro:", nullptr));
         nroPregunta->setText(QString());
-        label_3->setText(QCoreApplication::translate("VentanaJuego", "Turno", nullptr));
+        label_3->setText(QCoreApplication::translate("VentanaJuego", "Turno:", nullptr));
         turno->setText(QString());
+        label_5->setText(QCoreApplication::translate("VentanaJuego", "Categoria:", nullptr));
+        labelCategoria->setText(QString());
         aliasP1->setText(QString());
-        puntajeP1->setText(QString());
         aliasP2->setText(QString());
+        puntajeP1->setText(QString());
         puntajeP2->setText(QString());
     } // retranslateUi
 

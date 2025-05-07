@@ -35,15 +35,18 @@ public:
             VentanaListarPreguntas->setObjectName("VentanaListarPreguntas");
         VentanaListarPreguntas->resize(700, 500);
         VentanaListarPreguntas->setMinimumSize(QSize(700, 500));
-        VentanaListarPreguntas->setMaximumSize(QSize(724, 512));
+        VentanaListarPreguntas->setMaximumSize(QSize(700, 500));
         verticalLayout_2 = new QVBoxLayout(VentanaListarPreguntas);
+        verticalLayout_2->setSpacing(10);
         verticalLayout_2->setObjectName("verticalLayout_2");
+        verticalLayout_2->setContentsMargins(10, 10, 10, 10);
         verticalLayout = new QVBoxLayout();
         verticalLayout->setObjectName("verticalLayout");
         listWidget_listaPreguntas = new QListWidget(VentanaListarPreguntas);
         listWidget_listaPreguntas->setObjectName("listWidget_listaPreguntas");
-        listWidget_listaPreguntas->setMinimumSize(QSize(700, 450));
-        listWidget_listaPreguntas->setMaximumSize(QSize(700, 450));
+        QFont font;
+        font.setPointSize(10);
+        listWidget_listaPreguntas->setFont(font);
 
         verticalLayout->addWidget(listWidget_listaPreguntas);
 
@@ -51,11 +54,13 @@ public:
         horizontalLayout->setObjectName("horizontalLayout");
         pushButton_editarPreguntaSeleccionada = new QPushButton(VentanaListarPreguntas);
         pushButton_editarPreguntaSeleccionada->setObjectName("pushButton_editarPreguntaSeleccionada");
+        pushButton_editarPreguntaSeleccionada->setFont(font);
 
         horizontalLayout->addWidget(pushButton_editarPreguntaSeleccionada);
 
         pushButton_borrarPreguntaSeleccionada = new QPushButton(VentanaListarPreguntas);
         pushButton_borrarPreguntaSeleccionada->setObjectName("pushButton_borrarPreguntaSeleccionada");
+        pushButton_borrarPreguntaSeleccionada->setFont(font);
 
         horizontalLayout->addWidget(pushButton_borrarPreguntaSeleccionada);
 

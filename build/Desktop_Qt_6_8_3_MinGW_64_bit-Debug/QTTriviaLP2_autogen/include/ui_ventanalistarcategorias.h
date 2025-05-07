@@ -35,11 +35,15 @@ public:
         VentanaListarCategorias->setMinimumSize(QSize(700, 500));
         VentanaListarCategorias->setMaximumSize(QSize(700, 500));
         verticalLayout = new QVBoxLayout(VentanaListarCategorias);
+        verticalLayout->setSpacing(10);
         verticalLayout->setObjectName("verticalLayout");
+        verticalLayout->setContentsMargins(10, 10, 10, 10);
         listWidget_listaCategorias = new QListWidget(VentanaListarCategorias);
         listWidget_listaCategorias->setObjectName("listWidget_listaCategorias");
-        listWidget_listaCategorias->setMinimumSize(QSize(600, 450));
-        listWidget_listaCategorias->setMaximumSize(QSize(690, 450));
+        listWidget_listaCategorias->setMinimumSize(QSize(400, 350));
+        QFont font;
+        font.setPointSize(10);
+        listWidget_listaCategorias->setFont(font);
 
         verticalLayout->addWidget(listWidget_listaCategorias);
 
@@ -47,6 +51,7 @@ public:
         horizontalLayout->setObjectName("horizontalLayout");
         pushButton_borrarCategoriaSeleccionada = new QPushButton(VentanaListarCategorias);
         pushButton_borrarCategoriaSeleccionada->setObjectName("pushButton_borrarCategoriaSeleccionada");
+        pushButton_borrarCategoriaSeleccionada->setFont(font);
 
         horizontalLayout->addWidget(pushButton_borrarCategoriaSeleccionada);
 
@@ -62,7 +67,7 @@ public:
     void retranslateUi(QWidget *VentanaListarCategorias)
     {
         VentanaListarCategorias->setWindowTitle(QCoreApplication::translate("VentanaListarCategorias", "Form", nullptr));
-        pushButton_borrarCategoriaSeleccionada->setText(QCoreApplication::translate("VentanaListarCategorias", "Borrar Categoria", nullptr));
+        pushButton_borrarCategoriaSeleccionada->setText(QCoreApplication::translate("VentanaListarCategorias", "Borrar Categor\303\255a", nullptr));
     } // retranslateUi
 
 };
