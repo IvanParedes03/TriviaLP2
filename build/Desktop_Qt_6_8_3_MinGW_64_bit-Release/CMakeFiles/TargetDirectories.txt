@@ -1,0 +1,9 @@
+C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/build/Desktop_Qt_6_8_3_MinGW_64_bit-Release/CMakeFiles/QTTriviaLP2.dir
+C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/build/Desktop_Qt_6_8_3_MinGW_64_bit-Release/CMakeFiles/edit_cache.dir
+C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/build/Desktop_Qt_6_8_3_MinGW_64_bit-Release/CMakeFiles/rebuild_cache.dir
+C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/build/Desktop_Qt_6_8_3_MinGW_64_bit-Release/CMakeFiles/list_install_components.dir
+C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/build/Desktop_Qt_6_8_3_MinGW_64_bit-Release/CMakeFiles/install.dir
+C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/build/Desktop_Qt_6_8_3_MinGW_64_bit-Release/CMakeFiles/install/local.dir
+C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/build/Desktop_Qt_6_8_3_MinGW_64_bit-Release/CMakeFiles/install/strip.dir
+C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/build/Desktop_Qt_6_8_3_MinGW_64_bit-Release/CMakeFiles/QTTriviaLP2_autogen_timestamp_deps.dir
+C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/build/Desktop_Qt_6_8_3_MinGW_64_bit-Release/CMakeFiles/QTTriviaLP2_autogen.dir

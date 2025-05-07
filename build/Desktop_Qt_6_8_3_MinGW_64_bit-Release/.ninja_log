@@ -1,0 +1,27 @@
+# ninja log v6
+15	88	7683524583651452	CMakeFiles/clean.additional	321391b2684b2653
+89	115	7683524584382523	clean	139b443fbd37261f
+37	3482	7683524920681555	QTTriviaLP2_autogen/timestamp	c24662f12d8f8e03
+37	3482	7683524920681555	QTTriviaLP2_autogen/mocs_compilation.cpp	c24662f12d8f8e03
+37	3482	7683524920681555	C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/build/Desktop_Qt_6_8_3_MinGW_64_bit-Release/QTTriviaLP2_autogen/timestamp	c24662f12d8f8e03
+37	3482	7683524920681555	C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/build/Desktop_Qt_6_8_3_MinGW_64_bit-Release/QTTriviaLP2_autogen/mocs_compilation.cpp	c24662f12d8f8e03
+3496	3620	7683524923398603	QTTriviaLP2_autogen/EWIEGA46WW/qrc_recursos.cpp	e656f63530534408
+3496	3620	7683524923398603	C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/build/Desktop_Qt_6_8_3_MinGW_64_bit-Release/QTTriviaLP2_autogen/EWIEGA46WW/qrc_recursos.cpp	e656f63530534408
+3626	11039	7683524923649564	CMakeFiles/QTTriviaLP2.dir/main.cpp.obj	3a79f32aa24987e5
+3639	11737	7683524923783692	CMakeFiles/QTTriviaLP2.dir/classusuario.cpp.obj	b4193ab51574f85d
+3632	11824	7683524923716579	CMakeFiles/QTTriviaLP2.dir/ventanausuario.cpp.obj	571cf669f160fe37
+3660	14959	7683524923999254	CMakeFiles/QTTriviaLP2.dir/menumain.cpp.obj	352bcfcec0ae189f
+3620	15144	7683524923596308	CMakeFiles/QTTriviaLP2.dir/QTTriviaLP2_autogen/mocs_compilation.cpp.obj	6ea62cf1920e749a
+3646	15248	7683524923858785	CMakeFiles/QTTriviaLP2.dir/ventanalistausuario.cpp.obj	d2dca929d399ede9
+3681	15977	7683524924200031	CMakeFiles/QTTriviaLP2.dir/ventanalistarpreguntas.cpp.obj	2bec56b33d0b6143
+3654	16100	7683524923934156	CMakeFiles/QTTriviaLP2.dir/ventanaeditarusuario.cpp.obj	cc83f7c76f75df33
+15978	16439	7683525047175741	CMakeFiles/QTTriviaLP2.dir/QTTriviaLP2_autogen/EWIEGA46WW/qrc_recursos.cpp.obj	29b9cfaf083d900b
+3667	17272	7683524924064615	CMakeFiles/QTTriviaLP2.dir/preguntas.cpp.obj	12bd019b9749728f
+3673	19042	7683524924124649	CMakeFiles/QTTriviaLP2.dir/ventanacrearpreguntas.cpp.obj	1366ef72486ad877
+11738	20016	7683525004774635	CMakeFiles/QTTriviaLP2.dir/lectorjson.cpp.obj	62c9b15fe77d02d8
+11825	21348	7683525005643641	CMakeFiles/QTTriviaLP2.dir/ventanaeditarpreguntas.cpp.obj	87656fd361275c8e
+11040	22454	7683524997800670	CMakeFiles/QTTriviaLP2.dir/ventanalistarcategorias.cpp.obj	79f9eb6bf39270ad
+14959	23042	7683525036988079	CMakeFiles/QTTriviaLP2.dir/estadisticas.cpp.obj	c4e2592d6554c8c1
+15145	23729	7683525038851048	CMakeFiles/QTTriviaLP2.dir/configjuego.cpp.obj	940b76d7b174e7e7
+15248	24203	7683525039876060	CMakeFiles/QTTriviaLP2.dir/ventanajuego.cpp.obj	b52b84af5c5a1501
+24204	24553	7683525129430802	QTTriviaLP2.exe	9225f391f2c77e00
