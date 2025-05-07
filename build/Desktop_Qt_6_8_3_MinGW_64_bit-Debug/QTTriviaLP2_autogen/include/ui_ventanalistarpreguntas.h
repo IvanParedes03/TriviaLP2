@@ -35,7 +35,7 @@ public:
             VentanaListarPreguntas->setObjectName("VentanaListarPreguntas");
         VentanaListarPreguntas->resize(700, 500);
         VentanaListarPreguntas->setMinimumSize(QSize(700, 500));
-        VentanaListarPreguntas->setMaximumSize(QSize(700, 500));
+        VentanaListarPreguntas->setMaximumSize(QSize(724, 512));
         verticalLayout_2 = new QVBoxLayout(VentanaListarPreguntas);
         verticalLayout_2->setObjectName("verticalLayout_2");
         verticalLayout = new QVBoxLayout();

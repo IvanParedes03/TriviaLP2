@@ -144,6 +144,7 @@ void VentanaListarPreguntas::on_pushButton_borrarPreguntaSeleccionada_clicked()
 
         lectorArchivos.borrarPreguntaJson(idPreguntaSeleccionada);
         ui->listWidget_listaPreguntas->clear();
+        this->close();
 
     } else{
 

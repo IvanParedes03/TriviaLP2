@@ -1,4 +1,4 @@
-C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-rama_mati/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/QTTriviaLP2_autogen/EWIEGA46WW/moc_mainwindow.cpp: C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-rama_mati/mainwindow.h \
+C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-rama_mati/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/QTTriviaLP2_autogen/EWIEGA46WW/moc_estadisticas.cpp: C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-rama_mati/estadisticas.h \
   C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-rama_mati/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/QTTriviaLP2_autogen/moc_predefs.h \
   C:/Qt/6.8.3/mingw_64/include/QtCore/q20functional.h \
   C:/Qt/6.8.3/mingw_64/include/QtCore/q20iterator.h \
@@ -146,10 +146,9 @@ C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-
   C:/Qt/6.8.3/mingw_64/include/QtGui/qtransform.h \
   C:/Qt/6.8.3/mingw_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.8.3/mingw_64/include/QtGui/qwindowdefs_win.h \
-  C:/Qt/6.8.3/mingw_64/include/QtWidgets/QMainWindow \
-  C:/Qt/6.8.3/mingw_64/include/QtWidgets/qmainwindow.h \
+  C:/Qt/6.8.3/mingw_64/include/QtWidgets/QDialog \
+  C:/Qt/6.8.3/mingw_64/include/QtWidgets/qdialog.h \
   C:/Qt/6.8.3/mingw_64/include/QtWidgets/qsizepolicy.h \
-  C:/Qt/6.8.3/mingw_64/include/QtWidgets/qtabwidget.h \
   C:/Qt/6.8.3/mingw_64/include/QtWidgets/qtwidgets-config.h \
   C:/Qt/6.8.3/mingw_64/include/QtWidgets/qtwidgetsexports.h \
   C:/Qt/6.8.3/mingw_64/include/QtWidgets/qtwidgetsglobal.h \

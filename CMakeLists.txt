@@ -41,9 +41,9 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         lectorjson.h lectorjson.cpp
         ventanaeditarpreguntas.h ventanaeditarpreguntas.cpp ventanaeditarpreguntas.ui
         recursos.qrc
-
-
-
+        estadisticas.h estadisticas.cpp estadisticas.ui
+        configjuego.h configjuego.cpp configjuego.ui
+        ventanajuego.h ventanajuego.cpp ventanajuego.ui
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET QTTriviaLP2 APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

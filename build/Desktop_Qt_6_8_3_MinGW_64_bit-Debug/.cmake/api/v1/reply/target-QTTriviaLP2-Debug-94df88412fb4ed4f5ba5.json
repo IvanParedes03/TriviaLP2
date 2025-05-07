@@ -375,18 +375,21 @@
 				25,
 				28,
 				30,
-				42
+				34,
+				37,
+				40,
+				54
 			]
 		}
 	],
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 0,
-			"id" : "QTTriviaLP2_autogen::@6890427a1f51a3e7e1df"
+			"id" : "QTTriviaLP2_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		},
 		{
-			"id" : "QTTriviaLP2_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
+			"backtrace" : 0,
+			"id" : "QTTriviaLP2_autogen::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "QTTriviaLP2::@6890427a1f51a3e7e1df",
@@ -509,7 +512,10 @@
 				25,
 				28,
 				30,
-				42
+				34,
+				37,
+				40,
+				54
 			]
 		},
 		{
@@ -528,13 +534,19 @@
 				27,
 				29,
 				33,
-				34,
-				35,
 				36,
-				37,
-				38,
 				39,
-				40
+				42,
+				43,
+				44,
+				45,
+				46,
+				47,
+				48,
+				49,
+				50,
+				51,
+				52
 			]
 		},
 		{
@@ -548,7 +560,10 @@
 				20,
 				23,
 				26,
-				31
+				31,
+				35,
+				38,
+				41
 			]
 		},
 		{
@@ -562,15 +577,15 @@
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				41
+				53
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				43,
-				44
+				55,
+				56
 			]
 		}
 	],
@@ -756,6 +771,54 @@
 			"sourceGroupIndex" : 3
 		},
 		{
+			"backtrace" : 4,
+			"path" : "estadisticas.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "estadisticas.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "estadisticas.ui",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "configjuego.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "configjuego.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "configjuego.ui",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "ventanajuego.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "ventanajuego.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "ventanajuego.ui",
+			"sourceGroupIndex" : 2
+		},
+		{
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/QTTriviaLP2_autogen/include/ui_ventanausuario.h",
@@ -801,6 +864,24 @@
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/QTTriviaLP2_autogen/include/ui_ventanaeditarpreguntas.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/QTTriviaLP2_autogen/include/ui_estadisticas.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/QTTriviaLP2_autogen/include/ui_configjuego.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/QTTriviaLP2_autogen/include/ui_ventanajuego.h",
 			"sourceGroupIndex" : 1
 		},
 		{

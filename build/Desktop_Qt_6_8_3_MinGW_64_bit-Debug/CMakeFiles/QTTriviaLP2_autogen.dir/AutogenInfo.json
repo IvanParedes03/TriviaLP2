@@ -348,6 +348,18 @@
 			null
 		],
 		[
+			"C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/configjuego.h",
+			"MU",
+			"EWIEGA46WW/moc_configjuego.cpp",
+			null
+		],
+		[
+			"C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/estadisticas.h",
+			"MU",
+			"EWIEGA46WW/moc_estadisticas.cpp",
+			null
+		],
+		[
 			"C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/lectorjson.h",
 			"MU",
 			"EWIEGA46WW/moc_lectorjson.cpp",
@@ -381,6 +393,12 @@
 			"C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/ventanaeditarusuario.h",
 			"MU",
 			"EWIEGA46WW/moc_ventanaeditarusuario.cpp",
+			null
+		],
+		[
+			"C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/ventanajuego.h",
+			"MU",
+			"EWIEGA46WW/moc_ventanajuego.cpp",
 			null
 		],
 		[
@@ -485,6 +503,16 @@
 			null
 		],
 		[
+			"C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/configjuego.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/estadisticas.cpp",
+			"MU",
+			null
+		],
+		[
 			"C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/lectorjson.cpp",
 			"MU",
 			null
@@ -516,6 +544,11 @@
 		],
 		[
 			"C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/ventanaeditarusuario.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/HP Elitebook 735 G6/OneDrive/Proyectos de programacion/Trivia_Lp2-rama_mati/ventanajuego.cpp",
 			"MU",
 			null
 		],

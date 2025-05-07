@@ -4,6 +4,7 @@ QTTriviaLP2_autogen/timestamp: \
 	C:/Qt/6.8.3/mingw_64/include/QtCore/QJsonArray \
 	C:/Qt/6.8.3/mingw_64/include/QtCore/QJsonObject \
 	C:/Qt/6.8.3/mingw_64/include/QtCore/QObject \
+	C:/Qt/6.8.3/mingw_64/include/QtCore/QSet \
 	C:/Qt/6.8.3/mingw_64/include/QtCore/QString \
 	C:/Qt/6.8.3/mingw_64/include/QtCore/QUuid \
 	C:/Qt/6.8.3/mingw_64/include/QtCore/q20functional.h \
@@ -619,6 +620,10 @@ QTTriviaLP2_autogen/timestamp: \
 	C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-rama_mati/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/QTTriviaLP2_autogen/moc_predefs.h \
 	C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-rama_mati/classusuario.cpp \
 	C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-rama_mati/classusuario.h \
+	C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-rama_mati/configjuego.cpp \
+	C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-rama_mati/configjuego.h \
+	C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-rama_mati/estadisticas.cpp \
+	C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-rama_mati/estadisticas.h \
 	C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-rama_mati/lectorjson.cpp \
 	C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-rama_mati/lectorjson.h \
 	C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-rama_mati/main.cpp \
@@ -633,6 +638,8 @@ QTTriviaLP2_autogen/timestamp: \
 	C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-rama_mati/ventanaeditarpreguntas.h \
 	C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-rama_mati/ventanaeditarusuario.cpp \
 	C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-rama_mati/ventanaeditarusuario.h \
+	C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-rama_mati/ventanajuego.cpp \
+	C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-rama_mati/ventanajuego.h \
 	C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-rama_mati/ventanalistarcategorias.cpp \
 	C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-rama_mati/ventanalistarcategorias.h \
 	C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-rama_mati/ventanalistarpreguntas.cpp \
@@ -641,10 +648,13 @@ QTTriviaLP2_autogen/timestamp: \
 	C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-rama_mati/ventanalistausuario.h \
 	C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-rama_mati/ventanausuario.cpp \
 	C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-rama_mati/ventanausuario.h \
+	C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-rama_mati/configjuego.ui \
+	C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-rama_mati/estadisticas.ui \
 	C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-rama_mati/menumain.ui \
 	C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-rama_mati/ventanacrearpreguntas.ui \
 	C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-rama_mati/ventanaeditarpreguntas.ui \
 	C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-rama_mati/ventanaeditarusuario.ui \
+	C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-rama_mati/ventanajuego.ui \
 	C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-rama_mati/ventanalistarcategorias.ui \
 	C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-rama_mati/ventanalistarpreguntas.ui \
 	C:/Users/HP\ Elitebook\ 735\ G6/OneDrive/Proyectos\ de\ programacion/Trivia_Lp2-rama_mati/ventanalistausuario.ui \

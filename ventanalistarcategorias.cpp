@@ -143,6 +143,7 @@ void VentanaListarCategorias::on_pushButton_borrarCategoriaSeleccionada_clicked(
             cargarListaCategorias();
             ui->pushButton_borrarCategoriaSeleccionada->setEnabled(false);
             categoriaSeleccionada = nullptr;
+            this->close();
         } else {
             qDebug() << "Error al escribir en el archivo preguntas.json.";
             QMessageBox::critical(this, tr("Error"), tr("No se pudo guardar los cambios en el archivo de preguntas."));

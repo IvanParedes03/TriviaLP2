@@ -1,12 +1,12 @@
 /****************************************************************************
-** Meta object code from reading C++ file 'ventanaeditarcategorias.h'
+** Meta object code from reading C++ file 'estadisticas.h'
 **
 ** Created by: The Qt Meta Object Compiler version 68 (Qt 6.8.3)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../../../../ventanaeditarcategorias.h"
+#include "../../../../../../../Downloads/estadisticas.h"
 #include <QtCore/qmetatype.h>
 
 #include <QtCore/qtmochelpers.h>
@@ -16,7 +16,7 @@
 
 #include <QtCore/qxptype_traits.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
-#error "The header file 'ventanaeditarcategorias.h' doesn't include <QObject>."
+#error "The header file 'estadisticas.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 68
 #error "This file was generated using the moc from 6.8.3. It"
 #error "cannot be used with the include files from this version of Qt."
@@ -31,19 +31,19 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 QT_WARNING_DISABLE_GCC("-Wuseless-cast")
 namespace {
-struct qt_meta_tag_ZN23VentanaEditarCategoriasE_t {};
+struct qt_meta_tag_ZN12estadisticasE_t {};
 } // unnamed namespace
 
 
 #ifdef QT_MOC_HAS_STRINGDATA
-static constexpr auto qt_meta_stringdata_ZN23VentanaEditarCategoriasE = QtMocHelpers::stringData(
-    "VentanaEditarCategorias"
+static constexpr auto qt_meta_stringdata_ZN12estadisticasE = QtMocHelpers::stringData(
+    "estadisticas"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
 #endif // !QT_MOC_HAS_STRINGDATA
 
-Q_CONSTINIT static const uint qt_meta_data_ZN23VentanaEditarCategoriasE[] = {
+Q_CONSTINIT static const uint qt_meta_data_ZN12estadisticasE[] = {
 
  // content:
       12,       // revision
@@ -59,46 +59,44 @@ Q_CONSTINIT static const uint qt_meta_data_ZN23VentanaEditarCategoriasE[] = {
        0        // eod
 };
 
-Q_CONSTINIT const QMetaObject VentanaEditarCategorias::staticMetaObject = { {
-    QMetaObject::SuperData::link<QWidget::staticMetaObject>(),
-    qt_meta_stringdata_ZN23VentanaEditarCategoriasE.offsetsAndSizes,
-    qt_meta_data_ZN23VentanaEditarCategoriasE,
+Q_CONSTINIT const QMetaObject estadisticas::staticMetaObject = { {
+    QMetaObject::SuperData::link<QDialog::staticMetaObject>(),
+    qt_meta_stringdata_ZN12estadisticasE.offsetsAndSizes,
+    qt_meta_data_ZN12estadisticasE,
     qt_static_metacall,
     nullptr,
-    qt_incomplete_metaTypeArray<qt_meta_tag_ZN23VentanaEditarCategoriasE_t,
+    qt_incomplete_metaTypeArray<qt_meta_tag_ZN12estadisticasE_t,
         // Q_OBJECT / Q_GADGET
-        QtPrivate::TypeAndForceComplete<VentanaEditarCategorias, std::true_type>
+        QtPrivate::TypeAndForceComplete<estadisticas, std::true_type>
     >,
     nullptr
 } };
 
-void VentanaEditarCategorias::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void estadisticas::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
-    auto *_t = static_cast<VentanaEditarCategorias *>(_o);
+    auto *_t = static_cast<estadisticas *>(_o);
     (void)_t;
     (void)_c;
     (void)_id;
     (void)_a;
 }
 
-const QMetaObject *VentanaEditarCategorias::metaObject() const
+const QMetaObject *estadisticas::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
-void *VentanaEditarCategorias::qt_metacast(const char *_clname)
+void *estadisticas::qt_metacast(const char *_clname)
 {
     if (!_clname) return nullptr;
-    if (!strcmp(_clname, qt_meta_stringdata_ZN23VentanaEditarCategoriasE.stringdata0))
+    if (!strcmp(_clname, qt_meta_stringdata_ZN12estadisticasE.stringdata0))
         return static_cast<void*>(this);
-    if (!strcmp(_clname, "preguntas"))
-        return static_cast< preguntas*>(this);
-    return QWidget::qt_metacast(_clname);
+    return QDialog::qt_metacast(_clname);
 }
 
-int VentanaEditarCategorias::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int estadisticas::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
-    _id = QWidget::qt_metacall(_c, _id, _a);
+    _id = QDialog::qt_metacall(_c, _id, _a);
     return _id;
 }
 QT_WARNING_POP

@@ -28,7 +28,7 @@ public:
     QLabel *label;
     QWidget *verticalLayoutWidget_2;
     QVBoxLayout *verticalLayout_2;
-    QPushButton *pushButton_3;
+    QPushButton *botonJuego;
     QPushButton *botonEstadisticas;
     QPushButton *botonGestionUsuarios;
     QPushButton *botonGestionPreguntas;
@@ -66,13 +66,13 @@ public:
         verticalLayout_2 = new QVBoxLayout(verticalLayoutWidget_2);
         verticalLayout_2->setObjectName("verticalLayout_2");
         verticalLayout_2->setContentsMargins(175, 0, 175, 0);
-        pushButton_3 = new QPushButton(verticalLayoutWidget_2);
-        pushButton_3->setObjectName("pushButton_3");
+        botonJuego = new QPushButton(verticalLayoutWidget_2);
+        botonJuego->setObjectName("botonJuego");
         QFont font1;
         font1.setPointSize(15);
-        pushButton_3->setFont(font1);
+        botonJuego->setFont(font1);
 
-        verticalLayout_2->addWidget(pushButton_3);
+        verticalLayout_2->addWidget(botonJuego);
 
         botonEstadisticas = new QPushButton(verticalLayoutWidget_2);
         botonEstadisticas->setObjectName("botonEstadisticas");
@@ -103,7 +103,7 @@ public:
     {
         menuMain->setWindowTitle(QCoreApplication::translate("menuMain", "MainWindow", nullptr));
         label->setText(QCoreApplication::translate("menuMain", "QUIZ", nullptr));
-        pushButton_3->setText(QCoreApplication::translate("menuMain", "Jugar", nullptr));
+        botonJuego->setText(QCoreApplication::translate("menuMain", "Jugar", nullptr));
         botonEstadisticas->setText(QCoreApplication::translate("menuMain", "Estadisticas", nullptr));
         botonGestionUsuarios->setText(QCoreApplication::translate("menuMain", "Gestion de Usuarios", nullptr));
         botonGestionPreguntas->setText(QCoreApplication::translate("menuMain", "Gestion de Preguntas", nullptr));

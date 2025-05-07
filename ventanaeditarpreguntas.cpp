@@ -41,6 +41,7 @@ void VentanaEditarPreguntas::cargarDatosParaEdicion(const QJsonObject &pregunta)
             QString rutaArchivoCompleta = rutaCarpetaBase64 + nombreArchivoBase64;
 
             QFile archivoBase64(rutaArchivoCompleta);
+
             if (archivoBase64.open(QIODevice::ReadOnly | QIODevice::Text)) {
 
                 QByteArray base64Data = archivoBase64.readAll();

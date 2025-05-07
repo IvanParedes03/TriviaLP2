@@ -1,2 +1,14 @@
 [
+    {
+        "alias": "kingSlayer",
+        "nombre": "ivan",
+        "puntuacionHistorica": 5,
+        "puntuacionJuego": "0"
+    },
+    {
+        "alias": "matrix",
+        "nombre": "mati",
+        "puntuacionHistorica": 0,
+        "puntuacionJuego": "0"
+    }
 ]

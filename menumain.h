@@ -25,6 +25,8 @@ private slots:
     //setters
     void gestionUsuarios();
     void gestionPreguntas();
+    void setupJuego();
+    void ventanaEstadisticas();
 
 private:
 
